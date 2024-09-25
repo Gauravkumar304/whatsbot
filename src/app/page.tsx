@@ -10,7 +10,6 @@ import Support from "@/components/Support";
 import Bots from "@/components/Bots";
 import Feature from "@/components/Feature";
 import Hybrid from "@/components/Hybrid";
-import Analyse from "@/components/Analyse";
 import Footer from "@/components/Footer";
 
 
@@ -29,7 +28,6 @@ export default function Main() {
       <Bots/>
       <Feature/>
       <Hybrid/>
-      {/* <Analyse/> */}
       <Footer/>
        
       </main>
