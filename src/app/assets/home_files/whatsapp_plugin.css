@@ -1,0 +1,258 @@
+/* Using BEM method writing the code */
+.container-right {
+    z-index: 99999 !important;
+    width: 245px;
+    margin: 0 auto;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container-left {
+    z-index: 999999999 !important;
+    width: auto;
+    margin: 0 auto;
+    position: fixed;
+    left: 25px;
+    bottom: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.whatsapp-img {
+    width: 55px;
+    cursor: pointer;
+}
+
+.profile-img {
+    width: 60px;
+}
+
+.whatsapp-widget {
+    float: right;
+    margin-top: 15px;
+}
+
+.background-image {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+.whatsapp-widget-r {
+    float: left;
+    margin-top: 15px;
+}
+
+/* .container-left .whatsapp-widget {
+    float: left;
+    margin-top: 15px;
+  } */
+
+.whatsapp-chat-widget, .whatsapp-msg {
+    box-shadow: 2px 6.7px 5.3px rgb(0 0 0 / 5%), 0 12.5px 10px rgb(0 0 0 / 6%), 0 22.3px 17.9px rgb(0 0 0 / 7%);
+}
+.whatsapp-chat-widget {
+    /* height: 320px; */
+    border :2px solid #eaebee;
+    height: auto;
+    width: 240px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.4s ease;
+}
+
+.whatsapp-message-us-div {
+    height: 320px;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.4s ease;
+}
+
+.whatsapp-chat-widget, .whatsapp-msg {
+    box-shadow: 2px 6.7px 5.3px rgb(245 239 239 / 0%), 0 12.5px 10px rgb(240 236 236 / 6%), 0 22.3px 17.9px rgb(0 0 0 / 7%);
+}
+
+a {
+    text-decoration: none;
+}
+
+.whatsapp-header {
+    display: flex;
+    height: 60px;
+    background: linear-gradient(135deg,#40c351,#339e41);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.widget-close-btn {
+    position: absolute;
+    color: white;
+    font-size: 22px !important;
+    right: 16px;
+    padding: 2px 4px;
+    top: 18px;
+    cursor: pointer;
+}
+
+.widget-close-btn:hover {
+    color: #fff !important;
+    background: #0c180b45;
+    border-radius: 2px;
+}
+
+.header-content {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+    padding: 2px 0;
+}
+
+.header-image {
+    width: 40px;
+    height: 37px;
+    border-radius: 50%;
+    margin-left: 14px;
+    margin-right: 2px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.header-name {
+    width: 200px;
+    padding: 0 0.5em;
+    color: white;
+}
+
+.profile-img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.company-name {
+    font-size: 0.9em !important;
+    display: block;
+    font-weight: 500;
+    line-height: 36px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
+.company-status {
+    font-size: 0.6rem;
+  }
+
+.whatsapp-body {
+    position: relative;
+    height: 180px;
+    width: 100%;
+}
+
+.whatsapp-footer {
+    box-shadow: 0 48px 48px -16px #999faa;
+    border-bottom-width: 0px !important;
+    border-top-width: 0px !important;
+    border: 1px solid #eaebee;
+    padding: 0.7em 0;
+    text-align: center;
+    background: white;
+    border-radius: 0 0px 10px 10px;
+}
+
+.chat-btn {
+    width: 80%;
+    padding: 9px;
+    border-radius: 50px;
+    background-color: #4ec147;
+    border: none;
+    color: white;
+    font-weight: 400;
+    cursor: pointer;
+}
+.chat-btn:hover {
+    background: #32b32b;
+}
+
+.msg {
+    font-size: 0.7rem;
+    padding: 1px;
+    margin: 0;
+  }
+
+.whatsapp-msg {
+    position: absolute;
+    /* top: 35px; */
+    top: 20px;
+    left: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 70%;
+}
+
+.user-name {
+    padding: 4px 0;
+    font-size: 0.7rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: #cd3c79;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
+.msg-text {
+  font-size: 0.7rem;
+  padding: 2px 0;
+  font-weight: 400;
+}
+
+.hide_sb {
+    opacity: 0;
+    animation-name: opacityList 0.5s ease;
+    visibility: hidden;
+    display: none;
+}
+
+.branding {
+    margin-top: 3px;
+    font-weight: 400;
+    display: flex;
+    font-size: 0.55rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.energeticIcon-branding {
+    width: 15px;
+}
+
+@keyframes opacityList {
+    0% {
+        height: 0px;
+      }
+      30% {
+        height: 50px;
+      }
+      68%,
+      72% {
+        height: 200px;
+      }
+      100% {
+        height: 320px;
+      }
+}

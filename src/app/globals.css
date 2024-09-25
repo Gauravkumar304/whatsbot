@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* 
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -24,4 +24,38 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+} */
+
+/* styles/globals.css */
+/* body {
+    font-family: Arial, Helvetica, sans-serif;
+  
+  } */
+
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: 'sans', sans-serif; 
+  }
+
+  /* styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
+
+.animate-slideUp {
+  animation: slideUp 1s ease-out;
+} */
+
+  

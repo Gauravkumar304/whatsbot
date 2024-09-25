@@ -1,0 +1,275 @@
+// Code Start Here => 15-02-2023 time: 13:06 PM
+
+var head = document.getElementsByTagName("head")[0];
+
+// Add Add Link
+var csslink = document.createElement("link");
+csslink.rel = "stylesheet";
+csslink.type = "text/css";
+csslink.href = "https://smatbot.s3.amazonaws.com/files/whatsapp_plugin.css";
+// csslink.href = "./whatsapp_plugin.css";
+head.appendChild(csslink);
+
+// Font-Awesome Icons Link.
+var fontawesomelink = document.createElement("Link");
+fontawesomelink.rel = "stylesheet";
+fontawesomelink.type = "text/css";
+fontawesomelink.href =
+  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
+head.appendChild(fontawesomelink);
+
+// Poppins link.
+var poppinslink = document.createElement("Link");
+poppinslink.rel = "stylesheet";
+poppinslink.type = "text/css";
+poppinslink.href =
+  "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200;1,300&display=swap";
+head.appendChild(poppinslink);
+
+var body = document.getElementsByTagName("BODY")[0];
+
+// WhatsApp icon displaying Code
+
+var mainContainerDivWA = document.createElement("DIV");
+
+var maincontainerWA = document.createElement("DIV");
+maincontainerWA.className = "container-" + position;
+
+// Section => You can see the profile picture, Hello Text and Company Name
+var messageDisplay = document.createElement("DIV");
+messageDisplay.className = "whatsapp-chat-widget main-image hide_sb";
+messageDisplay.id = "close-whatsapp-chat-widget";
+
+// created div inside of messageDisplay(Div);
+var whatsAppHeader = document.createElement("DIV");
+whatsAppHeader.className = "whatsapp-header";
+whatsAppHeader.id = "whatsapp-headerId";
+
+// Globally
+var whatsappheaderId = document.getElementById("whatsapp-headerId");
+var whatsappbodyWA = document.getElementById("whatsapp-bodyId");
+var whatsappfooterId = document.getElementById("whatsapp-footerId");
+
+// creating i element inside whatsAppHeader
+var whatsappITag = document.createElement("I");
+// whatsappITag.className = 'widget-close-btn fa fa-close';
+whatsappITag.className = "widget-close-btn fa fa-angle-down";
+whatsappITag.onclick = function () {
+  localStorage.setItem("wa-d-h-plg-in", "wa-d-plug-in");
+  var removeElementWA = document.getElementById("close-whatsapp-chat-widget");
+
+  while (removeElementWA.firstChild) {
+    removeElementWA.removeChild(removeElementWA.firstChild);
+  }
+  document.getElementById("close-whatsapp-chat-widget").classList.add("hide_sb");
+
+  // removeElementWA.parentNode.removeChild(whatsappheaderId);
+  // removeElementWA.removeChild(removeElementWA.firstChild);
+  // removeElementWA.removeChild(removeElementWA.lastChild);
+  // removeElementWA.toggle();
+};
+
+whatsAppHeader.appendChild(whatsappITag);
+
+// Header Content inside whatsAppHeader
+var whatsappHeaderContent = document.createElement("DIV");
+whatsappHeaderContent.className = "header-content";
+
+var whatsAppheaderImg = document.createElement("DIV");
+whatsAppheaderImg.className = "header-image";
+
+// img element set inside of whatsAppheaderImg (Div)
+var whatsAppFirmIcon = document.createElement("IMG");
+whatsAppFirmIcon.src = avatar_url;
+whatsAppFirmIcon.className = "profile-img";
+whatsAppFirmIcon.alt = "smatbot logo";
+
+whatsAppHeader.appendChild(whatsappHeaderContent);
+whatsAppheaderImg.appendChild(whatsAppFirmIcon);
+
+// Header Name set inside of whatsappHeaderContent
+var whatsappHeaderName = document.createElement("DIV");
+whatsappHeaderName.className = "header-name";
+
+whatsappHeaderContent.appendChild(whatsAppheaderImg);
+whatsappHeaderContent.appendChild(whatsappHeaderName);
+
+// Span created inside of whatsappHeaderName
+var whatsappSpan = document.createElement("SPAN");
+whatsappSpan.className = "company-name user";
+
+var whatsAppSpanText = document.createTextNode(company_name);
+whatsappSpan.appendChild(whatsAppSpanText);
+whatsappHeaderName.appendChild(whatsappSpan);
+
+messageDisplay.appendChild(whatsAppHeader);
+
+// ******************************************************************************** Whatsapp body **************************************************
+var whatsAppBody = document.createElement("DIV");
+whatsAppBody.className = "whatsapp-body";
+whatsAppBody.id = "whatsapp-bodyId";
+
+// Body background Wallpapers ==========
+
+var whatsAppBGImg = document.createElement("IMG");
+whatsAppBGImg.src =
+  "https://custpostimages.s3.ap-south-1.amazonaws.com/sb_images/chat-background.jpg";
+whatsAppBGImg.className = "background-image";
+
+whatsAppBody.appendChild(whatsAppBGImg);
+
+// Whatsapp Message =============
+var whatsAppMessagebody = document.createElement("DIV");
+whatsAppMessagebody.className = "whatsapp-msg";
+
+// UserName Para
+var whatsAppUserName = document.createElement("P");
+whatsAppUserName.className = "user-name user msg";
+
+var whatsAppUsernameText = document.createTextNode(company_name);
+whatsAppUserName.appendChild(whatsAppUsernameText);
+
+whatsAppMessagebody.appendChild(whatsAppUserName);
+
+// How can i reply para
+var whatsAppMessage = document.createElement("P");
+whatsAppMessage.className = "msg-text msg";
+
+var whatsAppMessageText = document.createTextNode(greeting_message);
+whatsAppMessage.appendChild(whatsAppMessageText);
+
+// ************************************************************************************* WhatsApp Footer ************************************************
+
+var whatsAppFooter = document.createElement("DIV");
+whatsAppFooter.className = "whatsapp-footer";
+whatsAppFooter.id = "whatsapp-footerId";
+
+// Anchor tag for set inside of whatsApp Footer (Div)
+var whatsAppFooterAnchor = document.createElement("A");
+console.log(phone);
+const remmoveSymbolsPhone = phone.replace(/\D/g, '');
+whatsAppFooterAnchor.href =
+  // "https://api.whatsapp.com/send?phone=" + phone + "&text=" + starting_text;
+  "https://wa.me/" + remmoveSymbolsPhone + "?text=" + starting_text
+whatsAppFooterAnchor.target = "_blank";
+whatsAppFooterAnchor.className = "pointer";
+
+// button Footer
+
+var whatsAppFooterBtn = document.createElement("BUTTON");
+whatsAppFooterBtn.className = "chat-btn";
+
+// I html element favicon image
+
+var whatsAppFooterI = document.createElement("I");
+// whatsAppFooterI.className = 'fa fa-paper-plane';
+whatsAppFooterI.ariaHidden = "true";
+
+// Start Chat Text ====================================
+whatsAppFooterBtn.appendChild(whatsAppFooterI);
+
+var whatsAppFooterbtnText = document.createTextNode("Start Chat");
+whatsAppFooterBtn.appendChild(whatsAppFooterbtnText);
+
+whatsAppFooterAnchor.appendChild(whatsAppFooterBtn);
+
+whatsAppFooter.appendChild(whatsAppFooterAnchor);
+
+// Branding logo
+
+var whatsAppFooterBrandingLogo = document.createElement("SPAN");
+whatsAppFooterBrandingLogo.className = "branding";
+whatsAppFooterBrandingLogo.innerHTML =
+  '<span class="branding"><img src="https://custpostimages.s3.ap-south-1.amazonaws.com/sb_images/energetic--whatsappplugin.svg" class="energeticIcon-branding"> by <a href="https://www.smatbot.com" style="margin-left: 3px;" target="_blank">SmatBot</a></span>';
+
+var brandingEnergiticImg = document.createElement("IMG");
+brandingEnergiticImg.src =
+  "https://custpostimages.s3.ap-south-1.amazonaws.com/sb_images/energetic--whatsappplugin.svg";
+brandingEnergiticImg.className = "energeticIcon-branding";
+
+// whatsAppFooterBrandingLogo.appendChild(brandingEnergiticImg);
+
+var whatsAppFooterBrandName = document.createTextNode(" by SmatBot");
+// whatsAppFooterBrandingLogo.appendChild(whatsAppFooterBrandName);
+
+whatsAppFooter.appendChild(whatsAppFooterBrandingLogo);
+
+whatsAppBody.appendChild(whatsAppMessagebody);
+whatsAppMessagebody.appendChild(whatsAppMessage);
+messageDisplay.appendChild(whatsAppBody);
+messageDisplay.appendChild(whatsAppFooter);
+maincontainerWA.appendChild(messageDisplay);
+mainContainerDivWA.appendChild(maincontainerWA);
+
+//
+
+// Whatsapp plugin Icon
+// Animation code
+
+const animateCodeWA = {
+  // transition-timing-function: 'ease-in';
+  transition: " 0.8s ease-in",
+};
+
+const animateCodeWAout = {
+  transition: "1s ease-out",
+  transform: "translateY(0)",
+  opacity: "1",
+};
+
+var pluginIconImg = document.createElement("IMG");
+// pluginIconImg.src = 'https://custpostimages.s3.ap-south-1.amazonaws.com/sb_images/whatsapp.png';
+pluginIconImg.src =
+  "https://custpostimages.s3.ap-south-1.amazonaws.com/sb_images/whatsapp_latest.svg";
+// pluginIconImg.className = "whatsapp-widget whatsapp-img";
+pluginIconImg.className = `${position == 'right' ? 'whatsapp-widget' : 'whatsapp-widget-r'} whatsapp-img`;
+pluginIconImg.id = "floatPositionChange";
+pluginIconImg.animate(animateCodeWAout, animateCodeWA);
+
+pluginIconImg.onclick = function () {
+  var removeElementWA = document.getElementById("close-whatsapp-chat-widget");
+  const getWtAppsData = localStorage.getItem("wa-d-h-plg-in");
+  if (getWtAppsData == "wa-d-plug-in") {
+    removeElementWA.classList.toggle("hide_sb");
+    removeElementWA.appendChild(whatsAppHeader);
+    removeElementWA.appendChild(whatsAppBody);
+    removeElementWA.appendChild(whatsAppFooter);
+    if (removeElementWA.classList.length > 2) {
+      removeElementWA.classList.toggle("hide_sb");
+      removeElementWA.appendChild(whatsAppHeader);
+      removeElementWA.appendChild(whatsAppBody);
+      removeElementWA.appendChild(whatsAppFooter);
+    }
+    localStorage.removeItem("wa-d-h-plg-in");
+  } else {
+    removeElementWA.classList.toggle("hide_sb");
+  }
+};
+// pluginAnchorTag.appendChild(pluginIconImg);
+
+maincontainerWA.appendChild(pluginIconImg);
+mainContainerDivWA.appendChild(maincontainerWA);
+
+function checkForBody() {
+  // Check if the variable is available
+  if (
+    document.getElementsByTagName("BODY") &&
+    document.getElementsByTagName("BODY").length > 0
+  ) {
+    var body = document.getElementsByTagName("BODY")[0];
+    body.appendChild(mainContainerDivWA);
+    clearInterval(intervalID); // Stop the interval
+  }
+}
+
+// Start checking every second
+var intervalID = setInterval(checkForBody, 1000);
+
+/********************************************************************************************* */
+
+window.onload = () => {
+  // if (position == "right") {
+  //   document.getElementById("floatPositionChange").classList.remove("whatsapp-widget");
+  //   document.getElementById("floatPositionChange").classList.add("whatsapp-widget-r");
+  // }
+};

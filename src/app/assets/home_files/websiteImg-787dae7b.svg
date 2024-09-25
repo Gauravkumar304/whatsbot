@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="63.641" height="63.641" viewBox="0 0 63.641 63.641">
+  <defs>
+    <filter id="Rectangle_15679" x="0" y="0" width="63.641" height="63.641" filterUnits="userSpaceOnUse">
+      <feOffset dx="2" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#465def" flood-opacity="0.141"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="0.183" y1="0.12" x2="0.82" y2="0.807" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0040b3"/>
+      <stop offset="0.18" stop-color="#0040b3" stop-opacity="0.871"/>
+      <stop offset="0.435" stop-color="#0040b3" stop-opacity="0.529"/>
+      <stop offset="0.97" stop-opacity="0"/>
+      <stop offset="1" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_56675" data-name="Group 56675" transform="translate(6.5 5.705)">
+    <g transform="matrix(1, 0, 0, 1, -6.5, -5.7)" filter="url(#Rectangle_15679)">
+      <rect id="Rectangle_15679-2" data-name="Rectangle 15679" width="45.641" height="45.641" rx="22.821" transform="translate(7 6)" fill="#fff"/>
+    </g>
+    <g id="Group_56672" data-name="Group 56672" transform="translate(8.5 8.296)">
+      <g id="Layer_2" data-name="Layer 2" transform="translate(0 0)">
+        <g id="_60.ello" data-name="60.ello" transform="translate(0)">
+          <ellipse id="background" cx="14.413" cy="14.413" rx="14.413" ry="14.413" transform="translate(0)" fill="#005cff"/>
+          <path id="shadow" d="M65.081,61.191A14.41,14.41,0,0,1,55,71.24l-8.841-8.831C42,53.723,56.892,53,56.892,53Z" transform="translate(-36.791 -42.53)" fill="url(#linear-gradient)"/>
+        </g>
+      </g>
+      <path id="internet" d="M49.524,50.331h-2.88V47.066h3.345A12.842,12.842,0,0,1,49.524,50.331Zm-7.29-3.265H39.163a7.17,7.17,0,0,0,.919,3.265h2.6A13.489,13.489,0,0,1,42.234,47.066ZM43.4,41.383a5.5,5.5,0,0,1,1.164-1.573,7.246,7.246,0,0,0-4.149,2.925h2.425A9.048,9.048,0,0,1,43.4,41.383Zm-.719,1.885h-2.6a7.17,7.17,0,0,0-.919,3.265h3.072A13.489,13.489,0,0,1,42.679,43.268Zm6.845,0h-2.88v3.265h3.345A12.841,12.841,0,0,0,49.524,43.268Zm1,3.265h3.071a7.17,7.17,0,0,0-.919-3.265h-2.6a13.494,13.494,0,0,1,.445,3.265Zm-1.636-4.905A3.369,3.369,0,0,0,46.644,39.6v3.136h2.713A8.373,8.373,0,0,0,48.885,41.628Zm.473-.245a9.05,9.05,0,0,1,.56,1.352h2.425a7.246,7.246,0,0,0-4.149-2.925A5.506,5.506,0,0,1,49.358,41.383Zm-5.487.245a8.389,8.389,0,0,0-.472,1.107h2.713V39.6A3.369,3.369,0,0,0,43.871,41.628Zm5.487,10.588a5.505,5.505,0,0,1-1.164,1.573,7.244,7.244,0,0,0,4.149-2.925H49.918A9.04,9.04,0,0,1,49.358,52.216Zm.719-1.885h2.6a7.17,7.17,0,0,0,.919-3.265H50.521a13.494,13.494,0,0,1-.445,3.265Zm-.72.532H46.644V54a3.369,3.369,0,0,0,2.241-2.029A8.368,8.368,0,0,0,49.357,50.863Zm-6.125-.532h2.88V47.066H42.767A12.841,12.841,0,0,0,43.231,50.331Zm.639,1.64A3.37,3.37,0,0,0,46.112,54V50.863H43.4A8.387,8.387,0,0,0,43.871,51.971Zm-1.1-5.438h3.345V43.268h-2.88A12.84,12.84,0,0,0,42.767,46.533Zm.631,5.682a9.043,9.043,0,0,1-.56-1.352H40.413a7.244,7.244,0,0,0,4.149,2.925A5.5,5.5,0,0,1,43.4,52.216Z" transform="translate(-31.58 -31.826)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30.943" height="31" viewBox="0 0 30.943 31">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.259" y1="0.004" x2="0.804" y2="0.878" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#251b88"/>
+      <stop offset="0.218" stop-color="#251b88" stop-opacity="0.784"/>
+      <stop offset="0.611" stop-color="#251b88" stop-opacity="0.341"/>
+      <stop offset="0.874" stop-color="#251b88" stop-opacity="0.051"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_56705" data-name="Group 56705" transform="translate(-10887 2777)">
+    <ellipse id="background" cx="15.415" cy="15.415" rx="15.415" ry="15.415" transform="translate(10887 -2777)" fill="#5046af"/>
+    <path id="Path_203476" data-name="Path 203476" d="M14.767,4.339,13.093,2.654a1.692,1.692,0,0,0-1.116-.5L9.836,0,0,1.737v12.4l8.446,8.5q.392.021.789.022a14.549,14.549,0,0,0,14.391-12.7L17.507,3.805h0a1.678,1.678,0,0,0-2.739.534Z" transform="matrix(1, -0.017, 0.017, 1, 10893.926, -2768.656)" fill="url(#linear-gradient)"/>
+    <g id="Group_56704" data-name="Group 56704" transform="translate(10894.012 -2768.569)">
+      <path id="Path_203477" data-name="Path 203477" d="M0,12.064l8.731,1.482V0L0,1.482Z" transform="matrix(1, -0.017, 0.017, 1, 0, 0.152)" fill="#fff"/>
+      <path id="Path_203478" data-name="Path 203478" d="M0,5.825a1.99,1.99,0,0,0,1.213.406A1.883,1.883,0,0,0,3.145,4.4V0H0V5.825Z" transform="matrix(1, -0.017, 0.017, 1, 9.665, 5.517)" fill="#fff"/>
+      <path id="Path_203479" data-name="Path 203479" d="M1.175,2.95a1.475,1.475,0,1,0,0-2.95A1.487,1.487,0,0,0,0,.572V2.378A1.487,1.487,0,0,0,1.175,2.95Z" transform="matrix(1, -0.017, 0.017, 1, 9.603, 1.997)" fill="#fff"/>
+      <path id="Path_203480" data-name="Path 203480" d="M3.263,0H0V3.918a1.9,1.9,0,0,0,2.753.1,1.8,1.8,0,0,0,.54-1.3Z" transform="matrix(1, -0.017, 0.017, 1, 13.204, 6.376)" fill="#fff"/>
+      <ellipse id="Ellipse_5688" data-name="Ellipse 5688" cx="1.464" cy="1.464" rx="1.464" ry="1.464" transform="matrix(1, -0.017, 0.017, 1, 13.056, 2.893)" fill="#fff"/>
+      <path id="Path_203481" data-name="Path 203481" d="M3.211.74H1.978v3.6H1.233V.74H0V0H3.211V.74Z" transform="matrix(1, -0.017, 0.017, 1, 2.63, 4.806)" fill="#302c89"/>
+    </g>
+  </g>
+</svg>
