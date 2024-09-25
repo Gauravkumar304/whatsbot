@@ -28,7 +28,6 @@ const Codepage = () => {
   const [visibleSteps, setVisibleSteps] = useState<number[]>([]);
 
   useEffect(() => {
-    // Trigger the animation in a loop, no reset
     let index = 0;
     const interval = setInterval(() => {
       setVisibleSteps((prev) => {
@@ -107,16 +106,6 @@ const Codepage = () => {
                   </div>
                 ))}
               </div>
-            )}
-
-            {/* Blue line animation */}
-            {index < steps.length - 1 && visibleSteps.includes(index) && (
-              <motion.div
-                initial={{ height: 0 }}
-                animate={{ height: "50px" }}
-                transition={{ duration: 0.5, ease: "easeInOut" }}
-                className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-blue-500"
-              ></motion.div>
             )}
           </motion.div>
         ))}
