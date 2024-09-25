@@ -13,12 +13,14 @@ import Hybrid from "@/components/Hybrid";
 import Footer from "@/components/Footer";
 
 
+
 export default function Main() {
   return (
     <div>
      <Navbar/>
      
       <main className="">  {/* //p-8 */}
+    
       <Home/>
       <Marquee/>
       <Aboutvideo/>

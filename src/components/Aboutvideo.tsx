@@ -4,14 +4,14 @@ import { motion } from 'framer-motion';
 import 'tailwindcss/tailwind.css';
 
 export default function Aboutvideo() {
-  const [isMuted, setIsMuted] = useState(true);
+  const [isMuted] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
   const videoRef = useRef<HTMLDivElement>(null);
 
   // Function to toggle mute state
-  const toggleMute = () => {
-    setIsMuted(!isMuted);
-  };
+  // const toggleMute = () => {
+  //   setIsMuted(!isMuted);
+  // };
 
   // Intersection Observer to trigger animation on scroll
   useEffect(() => {
@@ -61,12 +61,12 @@ export default function Aboutvideo() {
         </video>
 
         {/* Mute/Unmute Button */}
-        <button
+        {/* <button
           onClick={toggleMute}
           className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 z-10"
         >
           {isMuted ? "Unmute" : "Mute"}
-        </button>
+        </button> */}
       </motion.div>
     </div>
   );

@@ -59,7 +59,8 @@ export default function Navbar() {
                   onClick={toggleDropdown}
                   className="flex items-center text-black font-bold"
                 >
-                  Home <FontAwesomeIcon icon={faChevronDown} className="ml-1" />
+                 <Link href="/"> Home </Link>
+                  <FontAwesomeIcon icon={faChevronDown} className="ml-1" />
                 </button>
                 <div
                   onMouseLeave={handleMouseLeave} // Close dropdown on mouse leave
@@ -142,9 +143,12 @@ export default function Navbar() {
                 </a>
               </li> */}
               <li>
-                <Link href="/pages/Login" className="text-black font-bold p-5"> {/* Update this link */}
+                <Link href="/login" className="text-black font-bold p-5"> {/* Update this link */}
                   Login
                 </Link>
+
+               
+                
               </li>
             </ul>
 
