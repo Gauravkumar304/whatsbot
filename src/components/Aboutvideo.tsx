@@ -9,9 +9,9 @@ export default function Aboutvideo() {
   const videoRef = useRef<HTMLDivElement>(null);
 
   // Function to toggle mute state
-  const toggleMute = () => {
-    setIsMuted(!isMuted);
-  };
+  // const toggleMute = () => {
+  //   setIsMuted(!isMuted);
+  // };
 
   // Intersection Observer to trigger animation on scroll
   useEffect(() => {
