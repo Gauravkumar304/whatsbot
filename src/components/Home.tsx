@@ -34,7 +34,7 @@ const Home = () => {
       </div>
 
       {/* Image on the right for larger screens, below the text for mobile */}
-      <div className="md:w-1/2 w-full flex justify-center md:justify-end pt-8 md:pt-20">
+      <div className="md:w-1/2 w-full flex justify-center md:justify-end pt-8 md:pt-28">
         <Image
           src={homeimg}
           alt="Description of the image"

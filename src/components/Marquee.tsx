@@ -27,7 +27,7 @@ const companyLogos = [
 
 const Marquee = () => {
   return (
-    <div className="overflow-hidden py-4 md:p-20 p-10 h-15 m-5 md:m-20"> {/* Responsive padding for mobile and desktop */}
+    <div className="overflow-hidden py-4 md:p-0 p-10 h-15 m-5 md:m-20"> {/* Responsive padding for mobile and desktop */}
       {/* Marquee Container */}
       <div className="flex animate-marquee whitespace-nowrap md:px-8 px-4"> {/* Responsive horizontal padding */}
         {companyLogos.map((logo, index) => (

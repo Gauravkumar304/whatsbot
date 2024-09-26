@@ -50,13 +50,13 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
               <a href="#" className="text-sm hover:underline">
-              <FontAwesomeIcon icon={faSquareWhatsapp} size="2x" className="text-green-500" /> Facebook
+              <FontAwesomeIcon icon={faSquareWhatsapp} size="2x" className="text-green-500" /> Whatsapp
               </a>
               <a href="#" className="text-sm hover:underline">
-              <FontAwesomeIcon icon={faSquareInstagram} size="2x" className="text-pink-500" /> Twitter
+              <FontAwesomeIcon icon={faSquareInstagram} size="2x" className="text-pink-500" /> Instagram
               </a>
               <a href="#" className="text-sm hover:underline">
-              <FontAwesomeIcon icon={faFacebookMessenger} size="2x" className="text-blue-600" /> Instagram
+              <FontAwesomeIcon icon={faFacebookMessenger} size="2x" className="text-blue-600" /> Facebook
               </a>
               <a href="#" className="text-sm hover:underline">
               <FontAwesomeIcon icon={faYoutube} size="2x" className="text-red-500" /> Youtube
