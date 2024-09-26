@@ -11,7 +11,7 @@ const Footer = () => {
           
           {/* About Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">About Us</h3>
+            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <p className="text-sm">
             Experience 24/7 assistance with our WhatsApp Bot, offering personalized responses and efficient solutions tailored to your needs!
             </p>

@@ -67,7 +67,7 @@ export default function Aboutvideo() {
         >
           {isMuted ? "Unmute" : "Mute"}
         </button> */}
-      </motion.div>
+      </motion.div> 
     </div>
   );
 }

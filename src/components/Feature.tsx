@@ -3,19 +3,19 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLanguage, faCircleCheck, faGear } from "@fortawesome/free-solid-svg-icons";
 
-import feature1 from '../app/assets/feature1.png'
-import feature2 from '../app/assets/feature2.jpg'
-import feature3 from '../app/assets/feature3.jpg'
+import feature1 from '../app/assets/feature1.png';
+import feature2 from '../app/assets/feature2.jpg';
+import feature3 from '../app/assets/feature3.jpg';
 
 const Feature: React.FC = () => {
   return (
-    <div className="py-8 px-6 lg:px-8 bg-white max-w-screen-lg mx-auto">
+    <div className="py-8 px-4 lg:px-8 bg-white max-w-screen-lg mx-auto md:pt-8 pt-0">
       {/* Top Heading Section */}
-      <div className="text-center mb-12">
-        <h1 className="text-3xl font-bold">
+      <div className="text-center mb-8">
+        <h1 className="text-2xl md:text-3xl font-bold">
           Feature Rich <span className="text-blue-500">AI Chatbot</span>
         </h1>
-        <p className="mt-2 text-base text-gray-600">
+        <p className="mt-2 text-sm md:text-base text-gray-600">
           All the features you need for seamless workflows and to achieve your business goals.
         </p>
       </div>
@@ -29,13 +29,13 @@ const Feature: React.FC = () => {
             <Image
               src={feature1}
               alt="Security" 
-              className="mx-auto mb-2 h-36 w-full rounded-lg object-fill" />
+              className="mx-auto mb-2 h-36 w-full rounded-lg object-contain" />
             <h4 className="text-lg font-semibold">Automated Email Follow-ups</h4>
             <p className="text-gray-600 text-sm">Effortless Follow-ups with Automated Email Sequences.</p>
           </div>
 
           {/* Feature 5 */}
-          <div className="bg-gray-50 p-4 rounded-lg shadow-md mr-auto pl-16 max-tablet:pl-1">
+          <div className="bg-gray-50 p-4 rounded-lg shadow-md text-center">
             <Image 
               src={feature3}
               alt="Multilingual Capability" 

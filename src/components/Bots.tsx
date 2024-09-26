@@ -23,11 +23,11 @@ const Bots = () => {
   }, [images.length]);
 
   return (
-    <div className="flex justify-center items-center pb-6">
-      <div className="w-full max-w-6xl">
+    <div className="flex justify-center items-center ">
+      <div className="w-full max-w-6xl" >
         <div className="text-center mb-12">
           <div className="flex justify-center items-center rounded-lg">
-            <div className="relative w-full h-[400px] max-w-4xl"> {/* Adjust height as needed */}
+            <div className="relative w-full h-[200px] md:h-[400px] max-w-4xl"> {/* Adjust height as needed */}
               {images.map((image, index) => (
                 <img
                   key={index}
