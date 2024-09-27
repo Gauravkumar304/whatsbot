@@ -16,7 +16,13 @@ const Leading: React.FC = () => {
             } else if (entry.target === imagesRef.current) {
               entry.target.classList.add("animate-slideUp");
             }
-            observer.unobserve(entry.target); // Unobserve after animation to prevent blinking
+          } else {
+            // Reset the animation when it leaves the viewport, so it can re-trigger when it re-enters
+            if (entry.target === headingRef.current) {
+              entry.target.classList.remove("animate-slideUp");
+            } else if (entry.target === imagesRef.current) {
+              entry.target.classList.remove("animate-slideUp");
+            }
           }
         });
       },
@@ -35,8 +41,8 @@ const Leading: React.FC = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="text-center p-20">
-      <h3 ref={headingRef} className="text-xl font-bold mb-12 opacity-0">
+    <div ref={sectionRef} className="text-center  p-10 md:p-20">
+      <h3 ref={headingRef} className="text-xl md:text-2xl font-bold mb-8 md:mb-12 opacity-0">
         Leading the Way, Capture and CI Recognitions
       </h3>
 
@@ -45,21 +51,21 @@ const Leading: React.FC = () => {
         ref={imagesRef}
         className="grid grid-cols-2 gap-6 md:grid-cols-4 max-w-4xl mx-auto opacity-0"
       >
-        <img src="/lead1.png" alt="Capterra" className="h-20 w-auto object-contain" />
+        <img src="/lead1.png" alt="Capterra" className="h-16 md:h-20 w-auto object-contain" />
         <img
           src="/lead2.png"
           alt="Gartner Peer Insights Customers' Choice"
-          className="h-20 w-auto object-contain"
+          className="h-16 md:h-20 w-auto object-contain"
         />
         <img
           src="/lead3.png"
           alt="G2 Leader Summer 2021"
-          className="h-20 w-auto object-contain"
+          className="h-16 md:h-20 w-auto object-contain"
         />
         <img
           src="/lead4.png"
           alt="G2 Leader Fall 2021"
-          className="h-20 w-auto object-contain"
+          className="h-16 md:h-20 w-auto object-contain"
         />
       </div>
 

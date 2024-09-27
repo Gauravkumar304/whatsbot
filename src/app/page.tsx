@@ -1,5 +1,4 @@
-// import Image from "next/image";
-// import '../styles/globals.css'
+
 import Navbar from "@/components/Navbar";
 import Home from "@/components/Home";
 import Marquee from "@/components/Marquee";
@@ -20,7 +19,6 @@ export default function Main() {
      <Navbar/>
      
       <main className="">  {/* //p-8 */}
-    
       <Home/>
       <Marquee/>
       <Aboutvideo/>
@@ -31,10 +29,7 @@ export default function Main() {
       <Feature/>
       <Hybrid/>
       <Footer/>
-       
       </main>
     </div>
-    
-    
   );
 }
