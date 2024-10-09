@@ -28,7 +28,7 @@ const Bots = () => {
       <div className="w-full max-w-8xl">
         <div className="text-center mb-12">
           <div className="flex justify-center items-center rounded-lg">
-            <div className="relative w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl">
+            <div className="relative w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] max-w-md sm:max-w-md md:max-w-2xl lg:max-w-4xl">
               {/* Responsive height and width for different screen sizes */}
               {images.map((image, index) => (
                 <img
