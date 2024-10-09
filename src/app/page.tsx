@@ -10,8 +10,7 @@ import Bots from "@/components/Bots";
 import Feature from "@/components/Feature";
 import Hybrid from "@/components/Hybrid";
 import Footer from "@/components/Footer";
-import Privacypolicy from "@/components/Privacypolicy";
-import Termscondition from "@/components/Termscondition";
+
 
 
 
@@ -30,8 +29,6 @@ export default function Main() {
       <Bots/>
       <Feature/>
       <Hybrid/>
-      <Privacypolicy/>
-      <Termscondition/>
       <Footer/>
       </main>
     </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from "next/link";
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -28,19 +29,16 @@ const Footer = () => {
                 </a>
               </li>
               <li className="mb-2">
-                <a href="#" className="text-sm hover:underline">
-                  About
-                </a>
+                <Link href="/privacypolicy" 
+                className="text-sm hover:underline">
+                  Privacy Policy
+                </Link>
               </li>
-              {/* <li className="mb-2">
-                <a href="#" className="text-sm hover:underline">
-                  Products
-                </a>
-              </li> */}
+
               <li className="mb-2">
-                <a href="#" className="text-sm hover:underline">
-                  Contact Us
-                </a>
+                <Link href="/Termsconditions" className="text-sm hover:underline">
+                  Terms and Conditions
+                </Link>
               </li>
 
               
