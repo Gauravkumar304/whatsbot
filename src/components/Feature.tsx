@@ -13,7 +13,7 @@ const Feature: React.FC = () => {
       {/* Top Heading Section */}
       <div className="text-center mb-8">
         <h1 className="text-2xl md:text-3xl font-bold">
-          Feature Rich <span className="text-blue-500">AI Chatbot</span>
+          Feature Rich <span className="text-blue-500">WhatsApp Chatbot</span>
         </h1>
         <p className="mt-2 text-sm md:text-base text-gray-600">
           All the features you need for seamless workflows and to achieve your business goals.
@@ -31,7 +31,7 @@ const Feature: React.FC = () => {
               alt="Security" 
               className="mx-auto mb-2 h-36 w-full rounded-lg object-contain" />
             <h4 className="text-lg font-semibold">Automated Email Follow-ups</h4>
-            <p className="text-gray-600 text-sm">Effortless Follow-ups with Automated Email Sequences.</p>
+            <p className="text-gray-600 text-sm">Effortless Follow-ups with Automated WhatsApp method.</p>
           </div>
 
           {/* Feature 5 */}
@@ -53,8 +53,8 @@ const Feature: React.FC = () => {
               <div className="bg-red-100 p-2 rounded-full">
                 <FontAwesomeIcon icon={faCircleCheck} className='h-6 text-red-500' />
               </div>
-              <h3 className="mt-4 text-lg font-semibold mb-1">Email & Mobile OTP Validation</h3>
-              <p className="text-gray-600 text-sm">Dual Authentication via Email and Mobile OTP for Security.</p>
+              <h3 className="mt-4 text-lg font-semibold mb-1">WhatsApp OTP Validation</h3>
+              <p className="text-gray-600 text-sm">WhatsApp Authentication via OTP for Security.</p>  {/*  Dual Authentication via Email and Mobile OTP for Security. */}
             </div>
           </div>
 
@@ -91,7 +91,7 @@ const Feature: React.FC = () => {
           {/* Feature 7 */}
           <div className="bg-gray-50 p-4 rounded-lg shadow-md text-center">
             <h3 className="text-lg font-semibold mb-1">Explore Much More</h3>
-            <p className="text-gray-600 text-sm">Discover more with 50+ diverse features.</p>
+            {/* <p className="text-gray-600 text-sm">Discover more with 50+ diverse features.</p> */}
             <Image 
               src={feature2}
               alt="Explore Features" 

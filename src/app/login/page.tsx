@@ -9,7 +9,7 @@ const Login: React.FC = () => {
         {/* Left Side - Form Section */}
         <div className="w-full md:w-1/2 bg-white p-8">
           <div className="text-center">
-            <h2 className="text-2xl font-bold text-pink-600">WhatsBot</h2>
+            <h2 className="text-2xl font-bold text-blue-500">WhatsBot</h2>
             <p className="mt-2 text-xl font-semibold">Get more things done with Loggin platform.</p>
             <p className="mt-2 text-gray-600">Access the most powerful tool in the entire design and web industry.</p>
           </div>
@@ -21,8 +21,9 @@ const Login: React.FC = () => {
               <input
                 type="email"
                 id="email"
+                required
                 placeholder="E-mail Address"
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
             <div className="mb-6">
@@ -32,19 +33,20 @@ const Login: React.FC = () => {
               <input
                 type="password"
                 id="password"
+                required
                 placeholder="Password"
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
             <div className="flex justify-between items-center">
               <button
                 type="submit"
-                className="w-full bg-pink-500 text-white px-4 py-2 rounded-lg hover:bg-pink-600 transition duration-200"
+                className="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-200"
               >
                 Login
               </button>
               <button
-                className="ml-2 w-full bg-white border-2 border-pink-500 text-pink-500 px-4 py-2 rounded-lg hover:bg-gray-100 transition duration-200"
+                className="ml-2 w-full bg-white border-2 border-blue-500 text-blue-500 px-4 py-2 rounded-lg hover:bg-gray-100 transition duration-200"
               >  
               <Link href="/signup" className=""> {/* Update this link */}
               Create account 

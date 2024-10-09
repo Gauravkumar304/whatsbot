@@ -8,5 +8,10 @@
     font-family: 'sans', sans-serif; 
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+  
+
 
   

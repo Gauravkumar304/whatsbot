@@ -44,9 +44,9 @@ const Support: React.FC = () => {
       {/* Main Title */}
       <h1
         ref={titleRef}
-        className="text-5xl font-bold text-gray-900 opacity-0"
+        className="text-4xl sm:text-5xl font-bold text-gray-900 opacity-0"
       >
-        Omnichannel <span className="text-blue-500">Support</span>
+        WhatsApp <span className="text-blue-500">Support</span>
       </h1>
 
       {/* Subtitle */}
@@ -54,7 +54,7 @@ const Support: React.FC = () => {
         ref={subtitleRef}
         className="mt-4 text-lg text-gray-700 text-center opacity-0"
       >
-        Be everywhere and support your users across the channels with a single chatbot
+        Be everywhere and support your business
       </p>
 
       {/* Icons Section */}

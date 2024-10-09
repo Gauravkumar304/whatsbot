@@ -5,6 +5,7 @@ import { faBars, faChevronDown, faRobot } from "@fortawesome/free-solid-svg-icon
 import Link from "next/link";
 import { faSquareInstagram, faSquareWhatsapp, faFacebookMessenger, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
+
 export default function Navbar() {
   const [isMenu, setIsMenu] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -21,7 +22,9 @@ export default function Navbar() {
       {/* First Navbar */}
       <nav className="bg-blue-500 p-2 fixed top-0 w-full z-50 ">
         <p className="text-white flex justify-center text-sm text-center">
-          Introducing customised app model Unleash the full Potential of your data
+          {/* Introducing customised app model Unleash the full Potential of your data */}
+          Set Up WhatsApp Cloud API in Just 10 Minutes (+ Best Practices) [2024]
+
         </p>
       </nav>
 
@@ -54,7 +57,12 @@ export default function Navbar() {
         onClick={toggleDropdown}
         className="flex items-center text-black font-semibold text-sm hover:text-blue-500 cursor-pointer"
       >
-        Home
+        <Link href="/">
+        {/* <p className="text-black font-semibold text-sm hover:text-blue-500 cursor-pointer"> */}
+           Home
+           {/* </p> */}
+      </Link>
+       
         <FontAwesomeIcon icon={faChevronDown} className="ml-1" />
       </button>
       <div
@@ -129,9 +137,13 @@ export default function Navbar() {
       </div>
     </li>
 
+   
+
     <li>
-      <Link href="/">
-        <p className="text-black font-semibold text-sm hover:text-blue-500 cursor-pointer">Contact Us</p>
+      <Link href="#footer" >
+        <p className="text-black font-semibold text-sm hover:text-blue-500 cursor-pointer">
+          Contact Us
+        </p>
       </Link>
     </li>
 

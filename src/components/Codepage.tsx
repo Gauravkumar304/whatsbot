@@ -3,16 +3,16 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const steps = [
-  { id: 1, text: "Welcome to SmatBot !!" },
+  { id: 1, text: "Welcome to Pinggo !!" },
   { id: 2, text: "Can you please tell me your name?" },
-  { id: 3, text: "Where do you want to use SmatBot?" },
+  { id: 3, text: "What is the nature of your business?" },
   {
     id: 4,
-    options: ["Website", "WhatsApp", "Mobile", "Instagram", "Others"],
+    options: ["Ecommerce", "doctor", "astrologer", "grocery shop", "restaurant", "Others"],
   },
   {
     id: 5,
-    text: "SmatBot is a Customizable AI bot that can help satisfy all your business needs.",
+    text: "Pinggo is a Customizable AI bot that can help satisfy all your business needs.",
   },
   {
     id: 6,
@@ -20,7 +20,7 @@ const steps = [
   },
   {
     id: 7,
-    text: "Easily integrate SmatBot into your mobile application and offer support in seconds.",
+    text: "Easily integrate Pinggo into your business.",
   },
 ];
 
@@ -35,14 +35,13 @@ const Codepage = () => {
         index = (index + 1) % steps.length; // Loop the index
         return newSteps;
       });
-    }, 500);
+    }, 0); // Increased delay for smoother transition
 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="min-h-screen flex justify-center items-center p-4 md:p-10">
-      {/* Add the background to the container only */}
       <div className="bg-gray-900 text-white w-full max-w-6xl p-4 md:p-10 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 rounded-lg px-6 lg:px-12">
         {/* Left side "Ask a new question" box */}
         <div className="flex flex-col items-start justify-start p-3 bg-gray-800 rounded-lg shadow-lg mb-4 md:mb-0 w-full md:w-1/5 h-auto md:h-60">
@@ -57,19 +56,19 @@ const Codepage = () => {
               <div className="bg-gray-700 p-1 rounded-full">
                 <span className="text-blue-400 text-lg">?</span>
               </div>
-              <span className="text-sm">Question</span>
+              <span className="text-sm">List your service</span>
             </div>
             <div className="flex items-center space-x-2">
               <div className="bg-gray-700 p-1 rounded-full">
                 <span className="text-blue-400 text-lg">◉</span>
               </div>
-              <span className="text-sm">Single Choice</span>
+              <span className="text-sm">Purchase product, schedule meet etc</span>
             </div>
             <div className="flex items-center space-x-2">
               <div className="bg-gray-700 p-1 rounded-full">
                 <span className="text-blue-400 text-lg">☑</span>
               </div>
-              <span className="text-sm">Multiple Choice</span>
+              <span className="text-sm">Get tracking</span>
             </div>
           </div>
         </div>
@@ -89,15 +88,17 @@ const Codepage = () => {
                   ? { opacity: 1, translateY: 0 }
                   : { opacity: 0 }
               }
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }} // Delays based on index for smooth entrance
               className={`text-center p-3 md:p-4 bg-gray-800 rounded-lg shadow-lg w-full max-w-xl relative ${
                 index >= 5 && visibleSteps.includes(index)
                   ? "flex flex-col md:flex-row space-x-0 md:space-x-4 justify-between"
                   : ""
-              }`}
+              } ${step.id === 4 || step.id === 7 ? "flex justify-center" : ""}`} // Center for id 4 and 7
             >
               {typeof step.text === "string" && (
-                <p className="text-base md:text-lg font-sm">{step.text}</p>
+                <div className="flex justify-center">
+                  <p className="text-base md:text-lg font-sm">{step.text}</p>
+                </div>
               )}
               {step.options && (
                 <div className="flex flex-wrap justify-center md:justify-start space-x-2 mt-2 gap-2 md:gap-4">
@@ -128,7 +129,7 @@ const Codepage = () => {
             </li>
             <li className="flex items-center space-x-2">
               <span className="bg-green-500 p-1 text-xs rounded-full">☑</span>
-              <span className="text-sm">Integrate 3rd party apps hassle-free</span>
+              <span className="text-sm">Integrate with WhatsApp server and start generating leads</span>
             </li>
           </ul>
         </div>
