@@ -14,7 +14,7 @@ const Privacypolicy: React.FC = () => {
 
       <h2 className="text-xl font-semibold mb-2">Terms</h2>
       <p className="mb-4">
-        By Installing Pinggo you are agreeing to be bound by this App’s Terms and Conditions of Use all applicable laws and regulations and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms you are prohibited from using or accessing Pinggo. The materials contained in this Pinggo website and App are protected by applicable copyright and trademark law.
+        By Installing Pinggo you are agreeing to be bound by this App&lsquo;s Terms and Conditions of Use all applicable laws and regulations and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms you are prohibited from using or accessing Pinggo. The materials contained in this Pinggo website and App are protected by applicable copyright and trademark law.
       </p>
 
       <h2 className="text-xl font-semibold mb-2">What information do we collect?</h2>
@@ -56,7 +56,7 @@ const Privacypolicy: React.FC = () => {
             <li>To send periodic emails The email address you provide may be used to send you information, respond to inquiries and/or other requests or questions.</li>
           </ol>
           <p className="mb-4">
-            Pinggo's use of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" className="text-blue-600 hover:underline">Google API Services User Data Policy</a> and <a href="https://policies.google.com/privacy" className="text-blue-600 hover:underline">Google Privacy Policy</a> including the Limited Use requirements. In case any user wants to remove the Pinggo access from their Google account they can simply do from the Google security setting page.
+            Pinggo&lsquo;s use of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" className="text-blue-600 hover:underline">Google API Services User Data Policy</a> and <a href="https://policies.google.com/privacy" className="text-blue-600 hover:underline">Google Privacy Policy</a> including the Limited Use requirements. In case any user wants to remove the Pinggo access from their Google account they can simply do from the Google security setting page.
           </p>
 
           <h2 className="text-xl font-semibold mb-2">How do we protect your information?</h2>
@@ -77,7 +77,7 @@ const Privacypolicy: React.FC = () => {
 
           <h2 className="text-xl font-semibold mb-2">Do we disclose any information to outside parties?</h2>
           <p className="mb-4">
-            We do not sell, trade or otherwise transfer to outside parties your personally identifiable information. This does not include trusted third parties who assist us in operating our website, conducting our business or servicing you so long as those parties agree to keep this information confidential. We may also release your information when we believe release is appropriate to comply with the law, enforce our site policies or protect our or others' rights, property or safety. However, non-personally identifiable visitor information may be provided to other parties for marketing, advertising or other uses.
+            We do not sell, trade or otherwise transfer to outside parties your personally identifiable information. This does not include trusted third parties who assist us in operating our website, conducting our business or servicing you so long as those parties agree to keep this information confidential. We may also release your information when we believe release is appropriate to comply with the law, enforce our site policies or protect our or others rights, property or safety. However, non-personally identifiable visitor information may be provided to other parties for marketing, advertising or other uses.
           </p>
 
           <h2 className="text-xl font-semibold mb-2">Facebook Integration Privacy Policy</h2>
@@ -98,7 +98,7 @@ const Privacypolicy: React.FC = () => {
             Since the leads collected from Facebook and the history that you create on the CRM on those leads are essential business data, there is no self-service interface in the Pinggo app for deleting that data to avoid deletion by mistake. You can however request the deletion of the above mentioned data by writing to <a href="mailto:r@pinggo.ai" className="text-blue-600 hover:underline">r@pinggo.ai</a> from your registered email address and the data will be deleted within 7 working days.
           </p>
           <p className="mb-4">
-            Disclaimer: Once you request a deletion of data along with the leads from Facebook, all the history on those leads that you've created on the CRM will also get deleted!
+            Disclaimer: Once you request a deletion of data along with the leads from Facebook, all the history on those leads that you&lsquo;ve created on the CRM will also get deleted!
           </p>
 
           <h2 className="text-xl font-semibold mb-2">Third-party links</h2>
