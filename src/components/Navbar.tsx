@@ -21,7 +21,8 @@ export default function Navbar() {
       {/* First Navbar */}
       <nav className="bg-blue-500 p-1 fixed top-0 w-full z-50 ">
         <p className="text-white  flex justify-center text-base text-center">
-          Introducing customised app model Unleash the full Potential of your data
+          {/* Introducing customised app model Unleash the full Potential of your data */}
+          Set Up WhatsApp Cloud API in Just 10 Minutes (+ Best Practices) [2024]
         </p>
       </nav>
 

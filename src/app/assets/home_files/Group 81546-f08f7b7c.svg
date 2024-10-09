@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
-  <g id="Group_81546" data-name="Group 81546" transform="translate(-565.999 -3726)">
-    <g id="Group_81349" data-name="Group 81349" transform="translate(566 3726)">
-      <rect id="Rectangle_13105" data-name="Rectangle 13105" width="50" height="50" rx="8" transform="translate(-0.001)" fill="#ffdfdf"/>
-      <path id="tick-mark" d="M15.729,0A15.729,15.729,0,1,0,31.458,15.729,15.747,15.747,0,0,0,15.729,0ZM23.7,12.4l-8.52,8.52a1.31,1.31,0,0,1-1.853,0l-4.26-4.26A1.311,1.311,0,0,1,10.921,14.8l3.333,3.333,7.593-7.593A1.311,1.311,0,0,1,23.7,12.4Z" transform="translate(8.521 9.155)" fill="#f62727"/>
-    </g>
-  </g>
-</svg>
