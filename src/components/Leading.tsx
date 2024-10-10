@@ -47,7 +47,7 @@ const Leading: React.FC = () => {
       </h3>
 
       {/* Centered Image Grid */}
-      <div
+      {/* <div
         ref={imagesRef}
         className="grid grid-cols-2 gap-6 md:grid-cols-4 max-w-4xl mx-auto opacity-0"
       >
@@ -67,7 +67,7 @@ const Leading: React.FC = () => {
           alt="G2 Leader Fall 2021"
           className="h-16 md:h-20 w-auto object-contain"
         />
-      </div>
+      </div> */}
 
       <style jsx>{`
         @keyframes slideUp {

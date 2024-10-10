@@ -50,13 +50,13 @@ export default function Aboutvideo() {
       >
         {/* Video Element */}
         <video
-          className="w-2/3 max-w-10xl h-auto rounded-lg shadow-lg z-10"
+          className="w-full  max-w-10xl h-auto rounded-lg shadow-lg z-10"
           autoPlay
           loop
           muted={isMuted} // Video starts muted
           controls
         >
-          <source src="/Smatbot+Product+Demo.mp4" type="video/mp4" />
+          <source src="/Aboutvideo.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 

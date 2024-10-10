@@ -30,19 +30,20 @@ const Feature: React.FC = () => {
               src={feature1}
               alt="Security" 
               className="mx-auto mb-2 h-36 w-full rounded-lg object-contain" />
-            <h4 className="text-lg font-semibold">Automated Email Follow-ups</h4>
+            <h4 className="text-lg font-semibold">Automated WhatsApp Follow-ups</h4>
             <p className="text-gray-600 text-sm">Effortless Follow-ups with Automated WhatsApp method.</p>
           </div>
 
           {/* Feature 5 */}
-          <div className="bg-gray-50 p-4 rounded-lg shadow-md text-center">
+          {/* <div className="bg-gray-50 p-4 rounded-lg shadow-md text-center">
+           
             <Image 
               src={feature3}
               alt="Multilingual Capability" 
-              className="mb-2 object-cover h-20 w-full rounded-lg" 
-            />
+              className="mb-2 object-cover h-20 w-full rounded-3xl" 
+            /> 
             <h4 className="text-lg font-semibold mb-1">High Security with Data Masking</h4>
-          </div>
+          </div> */}
         </div>
 
         {/* Middle Column */}
@@ -85,19 +86,31 @@ const Feature: React.FC = () => {
             <div className="absolute top-2 left-2 bg-orange-100 p-2 rounded-full">
               <FontAwesomeIcon icon={faLanguage} className='h-6 text-orange-400' />
             </div>
+            
             <h3 className="text-lg font-semibold mb-1">Multilingual <br /> Capability</h3>
           </div>
 
-          {/* Feature 7 */}
           <div className="bg-gray-50 p-4 rounded-lg shadow-md text-center">
+           
+            <Image 
+              src={feature3}
+              alt="Multilingual Capability" 
+              className="mb-2 object-cover h-20 w-full rounded-3xl" 
+            /> 
+            <h4 className="text-lg font-semibold mb-1">High Security with Data Masking</h4>
+          </div>
+
+
+          {/* Feature 7 */}
+          {/* <div className="bg-gray-50 p-4 rounded-lg shadow-md text-center">
             <h3 className="text-lg font-semibold mb-1">Explore Much More</h3>
             {/* <p className="text-gray-600 text-sm">Discover more with 50+ diverse features.</p> */}
-            <Image 
+            {/* <Image 
               src={feature2}
               alt="Explore Features" 
               className="mx-auto mb-2 object-cover h-36 w-full rounded-lg" 
             />
-          </div>
+          </div> */} 
         </div>
       </div>
     </div>

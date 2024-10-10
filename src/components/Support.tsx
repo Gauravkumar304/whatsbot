@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useRef } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSquareInstagram, faSquareWhatsapp, faFacebookMessenger, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faSquareInstagram, faSquareWhatsapp, faFacebookMessenger, faYoutube } from '@fortawesome/free-brands-svg-icons';
+// import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 const Support: React.FC = () => {
   // Create refs for each section
@@ -58,7 +58,7 @@ const Support: React.FC = () => {
       </p>
 
       {/* Icons Section */}
-      <div
+      {/* <div
         ref={iconsRef}
         className="mt-8 flex space-x-4 opacity-0 flex-wrap justify-center"
       >
@@ -82,7 +82,7 @@ const Support: React.FC = () => {
           <FontAwesomeIcon icon={faYoutube} size="2x" className="text-red-500" />
           <span className="text-sm text-gray-600">YouTube</span>
         </div>
-      </div>
+      </div> */}
 
       {/* Inline style for animations */}
       <style jsx>{`

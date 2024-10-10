@@ -34,12 +34,12 @@ const Home = () => {
             <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 font-bold">
               Book Demo
             </button>
-            <button className="text-blue-500 px-4 py-2 rounded border border-blue-500 hover:bg-blue-200 font-bold">
+            {/* <button className="text-blue-500 px-4 py-2 rounded border border-blue-500 hover:bg-blue-200 font-bold">
               Free Trial
-            </button>
+            </button> */}
           </div>
           <p className="text-xs md:text-sm text-blue-500 ">
-            *14 days Free Trial* No Credit Card Required
+            *14 days Free Trial <br /> * No Credit Card Required
           </p>
         </div>
       </div>
