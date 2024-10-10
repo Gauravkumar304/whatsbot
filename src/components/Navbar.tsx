@@ -184,7 +184,7 @@ export default function Navbar() {
             {/* Mobile Right-side Buttons */}
             <div className="flex flex-col items-center space-y-4">
               <button className="border border-blue-500 text-blue-500 px-4 py-2 font-semibold text-xs rounded hover:bg-blue-50 w-full max-w-xs">
-                Login
+              <Link href="/login">Login</Link>
               </button>
               <button className="bg-blue-500 text-white px-4 py-2 font-semibold text-xs rounded hover:bg-blue-600 w-full max-w-xs">
                 Book Demo
