@@ -28,7 +28,7 @@ export default function Navbar() {
 
   {/* Floating Droplet Animation */}
   <div className="absolute inset-0 overflow-hidden pointer-events-none">
-    {Array.from({ length: 500 }).map((_, i) => (
+    {Array.from({ length: 300 }).map((_, i) => (
       <span
         key={i}
         className="absolute bg-gray-300 rounded-full opacity-30 drop-shadow-lg animate-float w-[2px] h-[2px] sm:w-[3px] sm:h-[3px]"
@@ -138,11 +138,11 @@ export default function Navbar() {
             </ul>
             {/* Buttons on the Right */}
             <div className="flex space-x-4">
-              <button className="text-blue-500 border border-blue-500 px-4 py-2 rounded font-semibold text-sm hover:bg-blue-200">
-                <Link href="/login">Login</Link>
-              </button>
               <button className="bg-blue-500 text-white px-4 py-2 rounded font-semibold text-sm hover:bg-blue-600">
                 Book Demo
+              </button>
+              <button className="text-blue-500 border border-blue-500 px-4 py-2 rounded font-semibold text-sm hover:bg-blue-200">
+                <Link href="/login">Login</Link>
               </button>
             </div>
           </div>

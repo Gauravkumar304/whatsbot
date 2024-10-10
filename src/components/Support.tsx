@@ -40,7 +40,7 @@ const Support: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center pt-20 pb-10 px-4">
+    <div className="flex flex-col items-center justify-center pt-20 pb-10 px-4 font-poppins">
       {/* Main Title */}
       <h1
         ref={titleRef}
