@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLanguage, faCircleCheck, faGear } from "@fortawesome/free-solid-svg-icons";
 
 import feature1 from '../app/assets/feature1.png';
-import feature2 from '../app/assets/feature2.jpg';
+// import feature2 from '../app/assets/feature2.jpg';
 import feature3 from '../app/assets/feature3.jpg';
 
 const Feature: React.FC = () => {
