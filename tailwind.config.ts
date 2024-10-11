@@ -13,23 +13,31 @@ const config: Config = {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        // sans: ['"sans-serif"', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
       },
-
       keyframes: {
         float: {
-          '0%': { transform: 'translateY(0px) translateX(0px)', opacity: '0.1' },
-          '50%': { transform: 'translateY(10px) translateX(10px)', opacity: '0.5' },
-          '100%': { transform: 'translateY(0px) translateX(0px)', opacity: '0.1' },
+          '0%': { transform: 'translateY(0px)', opacity: '0' },
+          '50%': { transform: 'translateY(10px)', opacity: '0.5' },
+          '100%': { transform: 'translateY(0px)', opacity: '1' },
+        },
+        fadeLeft: {
+          '0%': { transform: 'translateX(-20px)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
+        fadeRight: {
+          '0%': { transform: 'translateX(20px)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
         },
       },
       animation: {
-        float: 'float 3s ease-in-out infinite', // Custom animation with smooth timing
+        float: 'float 3s ease-in-out infinite', // Floating effect for continuous smooth animation
+        'fade-left': 'fadeLeft 1s ease-out forwards', // Set 'forwards' to retain the final animation state
+        'fade-right': 'fadeRight 1s ease-out forwards', // Same as above, to retain final state
       },
-      
     },
   },
   plugins: [],
 };
+
 export default config;

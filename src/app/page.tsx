@@ -10,6 +10,11 @@ import Bots from "@/components/Bots";
 import Feature from "@/components/Feature";
 import Hybrid from "@/components/Hybrid";
 import Footer from "@/components/Footer";
+import Platform from "@/components/Platform";
+import Broadcast from "@/components/Broadcast";
+import Selling from "@/components/Selling";
+import WhatsappAd from "@/components/Whatsappad";
+import Dropoff from "@/components/Dropoff";
 
 
 
@@ -29,6 +34,11 @@ export default function Main() {
       <Bots/>
       <Feature/>
       <Hybrid/>
+      <Platform/>
+      <Broadcast/>
+      <Selling/>
+      <WhatsappAd/>
+      <Dropoff/>
       <Footer/>
       </main>
     </div>
