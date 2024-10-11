@@ -2,12 +2,12 @@
 import React, { useEffect, useRef } from "react";
 
 // Debounced Intersection Observer handler to prevent excessive triggering
-const debounce = (func: (...args: any[]) => void, delay: number) => {
+const debounce = (func: (entries: IntersectionObserverEntry[]) => void, delay: number) => {
   let timeout: NodeJS.Timeout;
-  return (...args: any[]) => {
+  return (entries: IntersectionObserverEntry[]) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => {
-      func(...args);
+      func(entries);
     }, delay);
   };
 };

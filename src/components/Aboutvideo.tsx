@@ -3,9 +3,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import 'tailwindcss/tailwind.css';
 
-const debounce = (func: (...args: any[]) => void, delay: number) => {
+// Correctly typing the debounce function
+const debounce = (func: (entries: IntersectionObserverEntry[]) => void, delay: number) => {
   let timeout: NodeJS.Timeout; // Type for setTimeout in Node.js environment
-  return (...args: any[]) => {
+  return (...args: [IntersectionObserverEntry[]]) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => {
       func(...args);
@@ -22,7 +23,7 @@ export default function Aboutvideo() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       debounce((entries: IntersectionObserverEntry[]) => {
-        entries.forEach((entry: IntersectionObserverEntry) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsVisible(true);
           } else {
@@ -46,7 +47,10 @@ export default function Aboutvideo() {
   }, []);
 
   return (
-    <div ref={videoRef} className={`relative w-full h-auto min-h-[50vh] md:h-[70vh] flex items-center justify-center transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'} p-0 m-0`}>
+    <div
+      ref={videoRef}
+      className={`relative w-full h-auto min-h-[50vh] md:h-[70vh] flex items-center justify-center transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'} p-0 m-0`}
+    >
       <motion.div
         className={`w-full max-w-[90vw] md:max-w-4xl p-0 m-0`}
         initial={{ transform: 'scale(0)' }}

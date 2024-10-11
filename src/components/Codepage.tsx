@@ -43,7 +43,7 @@ const Codepage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex justify-center items-center p-4 md:p-10 bg-gray-100">
+    <div className="flex justify-center items-center p-4">
       <div
         ref={containerRef}
         className="bg-gray-900 text-white w-full max-w-6xl p-4 md:p-10 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 rounded-lg"
