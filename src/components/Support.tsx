@@ -1,8 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from 'react';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faSquareInstagram, faSquareWhatsapp, faFacebookMessenger, faYoutube } from '@fortawesome/free-brands-svg-icons';
-// import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import React, { useEffect, useRef } from "react";
 
 const Support: React.FC = () => {
   // Create refs for each section
@@ -15,9 +12,9 @@ const Support: React.FC = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('animate-slideIn');
+            entry.target.classList.add("animate-slideIn");
           } else {
-            entry.target.classList.remove('animate-slideIn');
+            entry.target.classList.remove("animate-slideIn");
           }
         });
       },
@@ -44,7 +41,8 @@ const Support: React.FC = () => {
       {/* Main Title */}
       <h1
         ref={titleRef}
-        className="text-4xl sm:text-5xl font-bold text-gray-900 opacity-0"
+        className="text-4xl sm:text-4xl font-bold text-gray-900 opacity-0"
+        style={{ fontFamily: "'Poppins', sans-serif", fontSize: "32px" }}
       >
         WhatsApp <span className="text-blue-500">Support</span>
       </h1>
@@ -52,12 +50,13 @@ const Support: React.FC = () => {
       {/* Subtitle */}
       <p
         ref={subtitleRef}
-        className="mt-4 text-lg text-gray-700 text-center opacity-0"
+        className="mt-4 text-base text-gray-700 text-center opacity-0"
+        style={{ fontFamily: "'Poppins', sans-serif", fontSize: "16px" }}
       >
         Be everywhere and support your business
       </p>
 
-      {/* Icons Section */}
+      {/* Icons Section (Commented Out) */}
       {/* <div
         ref={iconsRef}
         className="mt-8 flex space-x-4 opacity-0 flex-wrap justify-center"
@@ -100,6 +99,11 @@ const Support: React.FC = () => {
         .animate-slideIn {
           animation: slideIn 1s ease-out forwards;
           opacity: 1;
+        }
+
+        /* Font family for Poppins */
+        .font-poppins {
+          font-family: "Poppins", sans-serif;
         }
       `}</style>
     </div>

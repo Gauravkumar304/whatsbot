@@ -3,6 +3,16 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import 'tailwindcss/tailwind.css';
 
+const debounce = (func: (...args: any[]) => void, delay: number) => {
+  let timeout: NodeJS.Timeout; // Type for setTimeout in Node.js environment
+  return (...args: any[]) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      func(...args);
+    }, delay);
+  };
+};
+
 export default function Aboutvideo() {
   const [isMuted] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
@@ -11,15 +21,15 @@ export default function Aboutvideo() {
   // Intersection Observer to trigger animation on scroll
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+      debounce((entries: IntersectionObserverEntry[]) => {
+        entries.forEach((entry: IntersectionObserverEntry) => {
           if (entry.isIntersecting) {
             setIsVisible(true);
           } else {
             setIsVisible(false);
           }
         });
-      },
+      }, 100), // Add a 100ms debounce to reduce frequent triggering
       { threshold: 0.1 }
     );
 
@@ -36,12 +46,12 @@ export default function Aboutvideo() {
   }, []);
 
   return (
-    <div ref={videoRef} className={`relative w-full h-auto min-h-[50vh] md:h-[70vh] flex items-center justify-center transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'} p-0 m-0`}>
+    <div ref={videoRef} className={`relative w-full h-auto min-h-[50vh] md:h-[70vh] flex items-center justify-center transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'} p-0 m-0`}>
       <motion.div
-        className={`w-full max-w-[90vw] md:max-w-4xl ${isVisible ? 'animate-scaleUp' : ''} p-0 m-0`}
-        initial={{ scale: 0 }}
-        animate={{ scale: isVisible ? 1 : 0 }}
-        transition={{ duration: 1 }}
+        className={`w-full max-w-[90vw] md:max-w-4xl p-0 m-0`}
+        initial={{ transform: 'scale(0)' }}
+        animate={{ transform: isVisible ? 'scale(1)' : 'scale(0)' }}
+        transition={{ duration: 0.5 }} // Reduced duration for smoother animation
       >
         {/* Video Element */}
         <video
@@ -50,6 +60,7 @@ export default function Aboutvideo() {
           loop
           muted={isMuted}
           controls
+          preload="none" // Lazy loading the video
         >
           <source src="/Aboutvideo.mp4" type="video/mp4" />
           Your browser does not support the video tag.

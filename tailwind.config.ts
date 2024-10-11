@@ -29,11 +29,16 @@ const config: Config = {
           '0%': { transform: 'translateX(20px)', opacity: '0' },
           '100%': { transform: 'translateX(0)', opacity: '1' },
         },
+        fadeInUp: {
+          '0%': {  transform: 'translateY(100%)', opacity: '0' },
+          '100%': {  transform: 'translateY(0)' , opacity: '1' },
+        },
       },
       animation: {
         float: 'float 3s ease-in-out infinite', // Floating effect for continuous smooth animation
         'fade-left': 'fadeLeft 1s ease-out forwards', // Set 'forwards' to retain the final animation state
         'fade-right': 'fadeRight 1s ease-out forwards', // Same as above, to retain final state
+        fadeInUp: 'fadeInUp 1s ease-out forwards',
       },
     },
   },

@@ -35,9 +35,10 @@ const Bots = () => {
                   key={index}
                   src={image}
                   alt={`Image ${index}`}
-                  className={`absolute w-full h-full object-cover rounded-3xl transition-all duration-1000 ease-in-out transform ${
+                  loading="lazy" // Lazy loading for better performance
+                  className={`absolute w-full h-full object-cover rounded-3xl transition-opacity duration-700 ease-in-out transform ${
                     index === currentImageIndex
-                      ? "opacity-100 rotate-0 scale-100 z-10" // Active image: normal view
+                      ? "opacity-100 z-10" // Active image: fully visible
                       : "opacity-0 -rotate-6 scale-75 -translate-x-6 z-0" // Non-active images: Tilted view
                   }`}
                   style={{ width: "100%", height: "100%" }} // Force all images to take the full width and height of the container
