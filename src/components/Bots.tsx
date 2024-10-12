@@ -1,8 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image"; // Import the Image component
 
 const Bots = () => {
-  // Array of image URLs (You can add your own images)
+  // Array of image URLs
   const images = [
     "/1.png",
     "/2.jpeg",
@@ -29,20 +30,25 @@ const Bots = () => {
         <div className="text-center mb-12">
           <div className="flex justify-center items-center rounded-lg">
             <div className="relative w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] max-w-md sm:max-w-md md:max-w-2xl lg:max-w-4xl">
-              {/* Responsive height and width for different screen sizes */}
+              {/* Map through images */}
               {images.map((image, index) => (
-                <img
+                <div
                   key={index}
-                  src={image}
-                  alt={`Image ${index}`}
-                  loading="lazy" // Lazy loading for better performance
-                  className={`absolute w-full h-full object-cover rounded-3xl transition-opacity duration-700 ease-in-out transform ${
+                  className={`absolute w-full h-full transition-opacity duration-700 ease-in-out transform ${
                     index === currentImageIndex
                       ? "opacity-100 z-10" // Active image: fully visible
                       : "opacity-0 -rotate-6 scale-75 -translate-x-6 z-0" // Non-active images: Tilted view
                   }`}
-                  style={{ width: "100%", height: "100%" }} // Force all images to take the full width and height of the container
-                />
+                >
+                  <Image
+                    src={image}
+                    alt={`Image ${index}`}
+                    fill // Fill the parent container
+                    className="rounded-3xl object-cover" // Add rounding to the image and cover it
+                    priority={index === currentImageIndex} // Optional: prioritize the current image
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Responsive sizes
+                  />
+                </div>
               ))}
             </div>
           </div>

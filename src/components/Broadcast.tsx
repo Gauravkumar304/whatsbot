@@ -23,20 +23,25 @@ const Broadcast: React.FC = () => {
       }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    const currentRef = ref.current; // Store current ref to avoid closure issue
+
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (currentRef) {
+        observer.unobserve(currentRef); // Use the stored ref for cleanup
       }
     };
   }, [controls]);
 
   return (
     <div className="flex items-center justify-center p-20">
-      <div className="flex flex-col lg:flex-row items-center justify-center p-8 lg:p-16 bg-white max-w-6xl mx-auto shadow-md rounded-lg" ref={ref}>
+      <div
+        className="flex flex-col lg:flex-row items-center justify-center p-8 lg:p-16 bg-white max-w-6xl mx-auto shadow-md rounded-lg"
+        ref={ref}
+      >
         {/* Left Section: Text Content */}
         <motion.div
           className="lg:w-1/2"
@@ -74,6 +79,9 @@ const Broadcast: React.FC = () => {
             src={broadcast}
             alt="WhatsApp Broadcast"
             className="rounded-lg shadow-lg"
+            layout="responsive" // Added layout for better responsiveness
+            width={500} // Set appropriate width
+            height={300} // Set appropriate height
           />
         </motion.div>
       </div>

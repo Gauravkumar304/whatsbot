@@ -22,13 +22,16 @@ const Feature: React.FC = () => {
       { threshold: 0.1 } // Trigger when 10% of the heading is visible
     );
 
-    if (headingRef.current) {
-      observer.observe(headingRef.current);
+    // Store current ref to prevent the warning about stale values
+    const currentHeadingRef = headingRef.current;
+
+    if (currentHeadingRef) {
+      observer.observe(currentHeadingRef);
     }
 
     return () => {
-      if (headingRef.current) {
-        observer.unobserve(headingRef.current);
+      if (currentHeadingRef) {
+        observer.unobserve(currentHeadingRef);
       }
     };
   }, []);

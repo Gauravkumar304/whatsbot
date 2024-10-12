@@ -1,9 +1,27 @@
 "use client";
-import React from "react";
+import React, { useState }  from "react";
 import Image from "next/image";
 import homeimg from "../app/assets/home.webp"; // Replace this with the actual path
 
-const Home = () => {
+const Home:React.FC = () => {
+
+  const [ripple, setRipple] = useState<{ x: number; y: number; size: number } | null>(null);
+
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const button = e.currentTarget;
+    const rect = button.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height);
+    const x = e.clientX - rect.left - size / 2;
+    const y = e.clientY - rect.top - size / 2;
+
+    setRipple({ x, y, size });
+
+    // Remove ripple effect after animation duration
+    setTimeout(() => setRipple(null), 50);
+  };
+
+
+
   return (
     <div className="flex flex-col md:flex-row items-center px-4 md:px-12 lg:px-20 pt-8">
       {/* Left Side: Main Text */}
@@ -26,15 +44,32 @@ const Home = () => {
           </p>
 
           {/* Button adjusted for better responsiveness */}
-          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mb-4">
-            <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 font-semibold font-poppins">
-              Book Demo
-            </button>
-          </div>
+            <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mb-4">
+              <button
+                className="relative overflow-hidden bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 font-semibold font-poppins transition-all duration-300 transform hover:scale-105 active:scale-95 focus:outline-none"
+                onClick={handleClick}
+              >
+                <span className="relative z-10">Book Demo</span>
+                {ripple && (
+                  <span
+                    className="absolute bg-white opacity-50 rounded-full pointer-events-none animate-ripple"
+                    style={{
+                      top: ripple.y,
+                      left: ripple.x,
+                      width: ripple.size,
+                      height: ripple.size,
+                    }}
+                  />
+                )}
+              </button>
+            </div>
+
+
+
 
           {/* Small disclaimer text */}
           <p className="text-xs md:text-sm text-blue-500 font-poppins">
-            *14 days Free Trial <br /> * No Credit Card Required
+            *14 days Free Trial  &nbsp;&nbsp;&nbsp;   * No Credit Card Required
           </p>
         </div>
       </div>

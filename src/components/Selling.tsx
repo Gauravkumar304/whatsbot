@@ -44,13 +44,13 @@ const Selling = () => {
             alt="Feature Image"
             width={600}
             height={400}
-            layout="responsive"
+            // layout="responsive"
             className="rounded-lg shadow-md"
           />
         </div>
 
         {/* Right Side: Text Options */}
-        <div className="w-full md:w-2/5 flex flex-col gap-6"> {/* Set width to 40% for text side */}
+        <div className="w-full md:w-2/5 flex flex-col gap-8"> {/* Set width to 40% for text side */}
             {/* Option 1 */}
             <div
                 className={`p-4 border rounded-md cursor-pointer transition ${
@@ -58,8 +58,8 @@ const Selling = () => {
                 }`}
                 onClick={() => handleTextClick('BUILD NO-CODE CHATBOT')}
             >
-                <h2 className="font-bold text-sm md:text-base lg:text-lg">BUILD NO-CODE CHATBOT IN MINUTES</h2>
-                <p className="text-xs md:text-sm lg:text-base">Build your Own Chatbot Flows your Way! Easy-to-use Chatbot & Catalog Flow builder to build your conversational journeys</p>
+                <p className="font-semibold text-sm md:text-base lg:text-base">BUILD NO-CODE CHATBOT IN MINUTES</p>
+                <p className="text-xs md:text-sm lg:text-sm">Build your Own Chatbot Flows your Way! Easy-to-use Chatbot & Catalog Flow builder to build your conversational journeys</p>
             </div>
 
             {/* Option 2 */}
@@ -69,8 +69,8 @@ const Selling = () => {
                 }`}
                 onClick={() => handleTextClick('WHATSAPP CART & CATALOGS')}
             >
-                <h2 className="font-bold text-sm md:text-base lg:text-lg">WHATSAPP CART & CATALOGS</h2>
-                <p className="text-xs md:text-sm lg:text-base">Drive Orders via WhatsApp with WhatsApp Catalogs and Cart. Seamlessly build your Catalog in 10 minutes and get going! </p>
+                <h2 className="font-semibold text-sm md:text-base lg:text-base">WHATSAPP CART & CATALOGS</h2>
+                <p className="text-xs md:text-sm lg:text-sm">Drive Orders via WhatsApp with WhatsApp Catalogs and Cart. Seamlessly build your Catalog in 10 minutes and get going! </p>
             </div>
 
             {/* Option 3 */}
@@ -80,8 +80,8 @@ const Selling = () => {
                 }`}
                 onClick={() => handleTextClick('WHATSAPP PAYMENTS')}
             >
-                <h2 className="font-bold text-sm md:text-base lg:text-lg">WHATSAPP PAYMENTS</h2>
-                <p className="text-xs md:text-sm lg:text-base">Yes! Collect Payments now on WhatsApp Seamlessly with WhatsApp Pay and other modes of Payments (Razorpay, Payu etc) and grow your revenues. </p>
+                <h2 className="font-semibold text-sm md:text-base lg:text-base">WHATSAPP PAYMENTS</h2>
+                <p className="text-xs md:text-sm lg:text-sm">Yes! Collect Payments now on WhatsApp Seamlessly with WhatsApp Pay and other modes of Payments (Razorpay, Payu etc) and grow your revenues. </p>
             </div>
         </div>
       </div>

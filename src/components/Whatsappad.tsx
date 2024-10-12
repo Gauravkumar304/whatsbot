@@ -39,7 +39,7 @@ const WhatsappAd = () => {
             alt="Ads Manager"
             width={1200}
             height={1200} // Adjust height to maintain a good aspect ratio
-            layout="responsive"
+            // layout="responsive"
             className="rounded-lg shadow-md"
           />
         </div>

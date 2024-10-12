@@ -1,48 +1,49 @@
 "use client";
 import React, { useEffect, useRef, useState } from 'react';
+import Image from 'next/image'; // Import Next.js Image component
 import 'tailwindcss/tailwind.css';
 
 const Dropoff: React.FC = () => {
-  // State to track if the section is in view
   const [isVisible, setIsVisible] = useState(false);
 
-  // Create refs for both text and image sections
   const textRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
 
-  // Use useEffect and Intersection Observer to trigger animations
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            setIsVisible(true); // Trigger animation when in view
+            setIsVisible(true);
           } else {
-            setIsVisible(false); // Reset if out of view (optional)
+            setIsVisible(false);
           }
         });
       },
-      { threshold: 0.1 } // Trigger when 10% of the component is visible
+      { threshold: 0.1 }
     );
 
-    // Observe the refs
-    if (textRef.current) observer.observe(textRef.current);
-    if (imageRef.current) observer.observe(imageRef.current);
+    // Store current refs to prevent the warning about stale values
+    const currentTextRef = textRef.current;
+    const currentImageRef = imageRef.current;
+
+    if (currentTextRef) observer.observe(currentTextRef);
+    if (currentImageRef) observer.observe(currentImageRef);
 
     // Cleanup
     return () => {
-      if (textRef.current) observer.unobserve(textRef.current);
-      if (imageRef.current) observer.unobserve(imageRef.current);
+      if (currentTextRef) observer.unobserve(currentTextRef);
+      if (currentImageRef) observer.unobserve(currentImageRef);
     };
   }, []);
 
   return (
-    <div className="flex justify-center items-center  p-4 lg:p-20 font-poppins ">
+    <div className="flex justify-center items-center p-4 lg:p-20 font-poppins ">
       <div className="bg-white flex flex-col lg:flex-row items-center lg:space-x-12 p-6 rounded-lg shadow-lg w-full max-w-6xl">
         
         {/* Left Side Text Section */}
         <div
-          ref={textRef} // Add ref to the text section
+          ref={textRef}
           className={`lg:w-1/3 w-full text-center lg:text-left mb-6 lg:mb-0 flex flex-col justify-center transition-opacity duration-500 transform ${
             isVisible ? 'opacity-100 animate-fade-left' : 'opacity-0'
           }`}
@@ -63,16 +64,18 @@ const Dropoff: React.FC = () => {
 
         {/* Right Side Image Section */}
         <div
-          ref={imageRef} // Add ref to the image section
+          ref={imageRef}
           className={`lg:w-2/3 w-full flex justify-center transition-opacity duration-500 transform ${
             isVisible ? 'opacity-100 animate-fade-right' : 'opacity-0'
           }`}
         >
           <div className="relative">
-            <img 
-              src="/dropoff.png" 
-              alt="Mobile Screen" 
-              className="max-w-xs w-full rounded-lg shadow-lg lg:max-w-lg" 
+            <Image // Use Next.js Image component
+              src="/dropoff.png"
+              alt="Mobile Screen"
+              className="max-w-xs w-full rounded-lg shadow-lg lg:max-w-lg"
+              width={500} // Specify image dimensions
+              height={300} // Specify image dimensions
             />
           </div>
         </div>
