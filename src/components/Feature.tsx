@@ -9,6 +9,7 @@ import feature3 from '../app/assets/feature3.jpg';
 
 const Feature: React.FC = () => {
   const headingRef = useRef<HTMLHeadingElement>(null);
+  const paragraphRef = useRef<HTMLParagraphElement>(null);
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
   useEffect(() => {
@@ -16,22 +17,31 @@ const Feature: React.FC = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); // Stop observing after the heading is visible
+        } else {
+          setIsVisible(false); // Reset visibility when not intersecting
         }
       },
       { threshold: 0.1 } // Trigger when 10% of the heading is visible
     );
 
-    // Store current ref to prevent the warning about stale values
+    // Store current refs to prevent the warning about stale values
     const currentHeadingRef = headingRef.current;
+    const currentParagraphRef = paragraphRef.current;
 
     if (currentHeadingRef) {
       observer.observe(currentHeadingRef);
     }
 
+    if (currentParagraphRef) {
+      observer.observe(currentParagraphRef);
+    }
+
     return () => {
       if (currentHeadingRef) {
         observer.unobserve(currentHeadingRef);
+      }
+      if (currentParagraphRef) {
+        observer.unobserve(currentParagraphRef);
       }
     };
   }, []);
@@ -42,11 +52,16 @@ const Feature: React.FC = () => {
       <div className="text-center mb-8">
         <h1
           ref={headingRef}
-          className={`text-2xl md:text-3xl font-bold transition-transform duration-300 transform ${isVisible ? 'scale-105' : 'scale-100'}`}
+          className={`text-2xl md:text-3xl font-bold transition-transform duration-700 transform ${isVisible ? 'scale-105 opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+          style={{ transitionDelay: '200ms' }}
         >
           Feature Rich <span className="text-green-500">WhatsApp Chatbot</span>
         </h1>
-        <p className="mt-2 text-sm md:text-base text-gray-600">
+        <p
+          ref={paragraphRef}
+          className={`mt-2 text-sm md:text-base text-gray-600 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+          style={{ transitionDelay: '500ms' }}
+        >
           All the features you need for seamless workflows and to achieve your business goals.
         </p>
       </div>

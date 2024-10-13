@@ -2,6 +2,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import 'tailwindcss/tailwind.css';
+import img from '../app/assets/homedesign1.png'
+import Image from 'next/image';
 
 // Correctly typing the debounce function
 const debounce = (func: (entries: IntersectionObserverEntry[]) => void, delay: number) => {
@@ -51,6 +53,10 @@ export default function Aboutvideo() {
       ref={videoRef}
       className={`relative w-full h-auto  md:h-[70vh] flex items-center justify-center transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'} p-0 m-0`}    //min-h[50vh]
     >
+      <Image
+      src={img}
+      alt='' 
+      className='hidden md:block m-16 pt-96'/>
       <motion.div
         className={`w-full max-w-[90vw] md:max-w-4xl p-0 m-0`}
         initial={{ transform: 'scale(0)' }}
@@ -70,6 +76,11 @@ export default function Aboutvideo() {
           Your browser does not support the video tag.
         </video>
       </motion.div>
+
+      <Image
+      src={img}
+      alt='' 
+      className='hidden md:block md:m-16 md:mt-[-96px]'/>
     </div>
   );
 }

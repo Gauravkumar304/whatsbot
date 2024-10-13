@@ -20,19 +20,19 @@ const Hybrid: React.FC = () => {
       {/* Image Section */}
       <div className="relative flex flex-col md:flex-row justify-center items-center mt-8 w-full">
         {/* Left Side Large Chat Interface */}
-        <div className="relative w-full md:w-1/2">
+        <div className="relative w-full md:w-3/4 ">
           <Image
             src={hybrid1}
             alt="Main Chat Interface"
-            className="w-full h-auto md:h-96 shadow-lg rounded-lg"
+            className="w-full h-auto  shadow-lg rounded-lg"     //md:h-96
           />
           
-          {/* Right Side Smaller Interface (overlapping at the top right corner) */}
-          <div className="absolute top-4 right-4 transform md:translate-x-1/2 -translate-y-1/2">
+          {/* Right Side Smaller Interface (overlapping at the top right corner) */} 
+          <div className="absolute   top-20 right-20 transform  md:translate-x-1/2 -translate-y-1/2 ">     {/*md:translate-x-1/2 -translate-y-1/2 */}
             <Image
               src={hybrid2}
               alt="Mobile Chat Interface 1"
-              className="w-40 sm:w-56 h-auto shadow-lg rounded-lg"
+              className="w-40 sm:w-56 md:w-96 h-auto shadow-lg rounded-lg"
             />
           </div>
         </div>

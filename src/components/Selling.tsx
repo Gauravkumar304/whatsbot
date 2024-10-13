@@ -1,15 +1,21 @@
-// components/Selling.tsx
 "use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const Selling = () => {
   // State to track which text is selected
   const [selectedText, setSelectedText] = useState('BUILD NO-CODE CHATBOT');
+  // State to control the animation direction
+  const [animationDirection, setAnimationDirection] = useState<'left' | 'right'>('right');
+  // State to control the animation
+  const [isAnimating, setIsAnimating] = useState(false);
 
   // Handle text click to update selected state
   const handleTextClick = (text: string) => {
+    // Determine animation direction based on the selected text
+    setAnimationDirection(selectedText === text ? 'right' : 'left'); // If the same text is clicked, slide out to the right
     setSelectedText(text);
+    setIsAnimating(true); // Trigger animation
   };
 
   // Function to determine which image to show based on the selected text
@@ -26,6 +32,16 @@ const Selling = () => {
     }
   };
 
+  // Effect to reset animation state when the selectedText changes
+  useEffect(() => {
+    if (isAnimating) {
+      const timer = setTimeout(() => {
+        setIsAnimating(false); // Reset animation after 300ms
+      }, 300);
+      return () => clearTimeout(timer);
+    }
+  }, [isAnimating]);
+
   return (
     <div className="flex flex-col items-center justify-center p-12 bg-gray-50 font-poppins">
       {/* Heading */}
@@ -37,15 +53,16 @@ const Selling = () => {
       {/* Content Section */}
       <div className="flex flex-col md:flex-row items-center justify-center gap-8 w-full max-w-5xl">
         {/* Left Side: Image Section */}
-        {/* Reduced width for the right side and added gap between sections */}
-        <div className="w-full md:w-3/5"> {/* Set width to 60% for image side */}
+        <div className="w-full md:w-3/5 relative overflow-hidden"> {/* Set width to 60% for image side */}
           <Image
             src={renderImage()}
             alt="Feature Image"
             width={600}
-            height={400}
-            // layout="responsive"
-            className="rounded-lg shadow-md"
+            height={600}
+            className={`rounded-lg shadow-md transition-transform duration-300 ${
+              isAnimating ? (animationDirection === 'left' ? '-translate-x-full' : 'translate-x-full') : 'translate-x-0'
+            }`}
+            onLoad={() => setIsAnimating(false)} // Reset animation on load
           />
         </div>
 

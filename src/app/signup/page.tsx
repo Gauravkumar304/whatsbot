@@ -9,7 +9,7 @@ const Signup: React.FC = () => {
         {/* Left Side - Form Section */}
         <div className="w-full md:w-1/2 bg-white p-8">
           <div className="text-center">
-            <h2 className="text-2xl font-bold text-blue-600">WhatsBot</h2>
+            <h2 className="text-2xl font-bold text-green-600">WhatsBot</h2>
             <p className="mt-2 text-xl font-semibold">Join the platform and get started.</p>
             <p className="mt-2 text-gray-600">Access the most powerful tools in the entire design and web industry.</p>
           </div>
@@ -23,7 +23,7 @@ const Signup: React.FC = () => {
                 id="email"
                 required
                 placeholder="E-mail Address"
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
               />
             </div>
             <div className="mb-4">
@@ -35,7 +35,7 @@ const Signup: React.FC = () => {
                 id="username"
                 required
                 placeholder="Username"
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
               />
             </div>
             <div className="mb-6">
@@ -47,13 +47,13 @@ const Signup: React.FC = () => {
                 id="password"
                 required
                 placeholder="Password"
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
               />
             </div>
             <div className="flex justify-between items-center">
               <button
                 type="submit"
-                className="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-200"
+                className="w-full bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition duration-200"
               >
                 Sign Up
               </button>
@@ -74,7 +74,7 @@ const Signup: React.FC = () => {
             </div>
           </div>
           <div className="mt-6 text-center">
-            <p className="text-gray-600">Already have an account? <a href="/login" className="text-blue-600 font-bold">Login</a></p>
+            <p className="text-gray-600">Already have an account? <a href="/login" className="text-green-600 font-bold">Login</a></p>
           </div>
         </div>
 

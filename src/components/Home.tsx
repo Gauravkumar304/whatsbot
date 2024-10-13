@@ -2,7 +2,8 @@
 import React, { useState }  from "react";
 import Image from "next/image";
 import homeimg from "../app/assets/home.webp"; // Replace this with the actual path
-//import homedesign1 from "../app/assets/homedesign1.png"
+import homedesign1 from "../app/assets/homedesign1.png"
+import hometextdesign from "../app/assets/hometextdesign.png"
 
 const Home:React.FC = () => {
 
@@ -24,19 +25,32 @@ const Home:React.FC = () => {
 
 
   return (
-    <div className="flex flex-col md:flex-row items-center px-4 md:px-12 lg:px-20 pt-8">
+    <div className="flex flex-col md:flex-row items-center  px-4 md:px-12 lg:px-20 pt-16 md:pt-12">
       {/* Left Side: Main Text */}
+      <Image
+          src={homedesign1}
+          alt=""
+          className=" md:pt-96  "
+          />
+      
       <div className="md:w-1/2 w-full mb-4 p-4 md:p-6 mx-4 md:mx-0  my-6 md:my-20">
         <div className="text-center md:text-left">
           {/* Headings in one line, reduced text size for better fit */}
-          <p className="text-black pt-8 md:pt-16 text-lg md:text-3xl font-bold font-poppins leading-tight">
+          <p className="text-black pt-4 md:pt-16 text-lg md:text-3xl font-bold font-poppins leading-tight">
             Understand the differences between
           </p>
           
           <p className="text-green-500 text-lg mb-2 md:text-3xl font-bold font-poppins leading-tight">
-          
-            Cloud API and Business API
-          </p>
+          {/* <Image
+            src={hometextdesign}
+            alt="text background"/> */}
+            Cloud API and Business API  
+           
+          </p> 
+
+
+
+
 
           {/* Paragraphs adjusted for one line with reduced size */}
           <p className="text-xs md:text-base font-poppins leading-tight">
@@ -71,13 +85,16 @@ const Home:React.FC = () => {
 
 
           {/* Small disclaimer text */}
-          <p className="text-xs md:text-sm text-green-500 font-poppins">
+          <p className="text-xs md:text-sm text-green-500 font-poppins ">
             *14 days Free Trial  &nbsp;&nbsp;&nbsp;   * No Credit Card Required
           </p>
+         
         </div>
 
-      </div>
+        
 
+      </div>
+      
       {/* Right Side: Image */}
       <div className="md:w-1/2 w-full flex justify-center md:justify-end pt-8 md:pt-28">
         <Image
@@ -86,6 +103,8 @@ const Home:React.FC = () => {
           className="object-contain w-full md:w-2/3 lg:w-[800px] h-auto" // Enlarging the image for all screens
         />
       </div>
+
+
     </div>
   );
 };

@@ -46,6 +46,12 @@ const Support: React.FC = () => {
       >
         WhatsApp <span className="text-green-500">Support</span>
       </h1>
+      {/* WhatsApp{" "}
+        <span className="relative inline-block">
+          <span className="absolute inset-0 rounded-full border-2 border-green-500 transform -translate-x-1/2 -translate-y-1/2"></span>
+          <span className="relative text-green-500">Support</span>
+        </span>
+      </h1> */}
 
       {/* Subtitle */}
       <p

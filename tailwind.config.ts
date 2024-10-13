@@ -43,8 +43,6 @@ const config: Config = {
             opacity: '0',
           },
         },
-
-
       },
       animation: {
         float: 'float 3s ease-in-out infinite', // Floating effect for continuous smooth animation
