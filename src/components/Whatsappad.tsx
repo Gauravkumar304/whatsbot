@@ -5,7 +5,7 @@ const WhatsappAd = () => {
   return (
     <div className="flex flex-col md:flex-row items-center justify-center p-6 md:p-12 bg-white font-poppins">
       {/* Left Side: Text Section */}
-      <div className="md:w-[40%] w-full text-center md:text-left space-y-6 md:space-y-8">
+      <div className="md:w-[40%] w-full   md:text-left space-y-6 md:space-y-8">   {/* text-center */}
         <h1 className="text-2xl md:text-[32px] font-bold leading-snug">
           Run Click to WhatsApp Ads for 5X Leads
         </h1>
@@ -13,7 +13,7 @@ const WhatsappAd = () => {
           Run Ads on Facebook & Instagram that land on WhatsApp. 5X Your lead generations & 2-3X Conversions Instantly!
         </p>
         <ul className="space-y-2 text-sm md:text-[16px]">
-          <li className="flex items-start justify-center md:justify-start space-x-2">
+          <li className="flex items-start  md:justify-start space-x-2">
             <span className="text-green-500">•</span>
             <span>Build Click to WhatsApp Ads from AiSensy Platform</span>
           </li>

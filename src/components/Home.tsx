@@ -2,6 +2,7 @@
 import React, { useState }  from "react";
 import Image from "next/image";
 import homeimg from "../app/assets/home.webp"; // Replace this with the actual path
+//import homedesign1 from "../app/assets/homedesign1.png"
 
 const Home:React.FC = () => {
 
@@ -31,7 +32,9 @@ const Home:React.FC = () => {
           <p className="text-black pt-8 md:pt-16 text-lg md:text-3xl font-bold font-poppins leading-tight">
             Understand the differences between
           </p>
+          
           <p className="text-blue-500 text-lg mb-2 md:text-3xl font-bold font-poppins leading-tight">
+          
             Cloud API and Business API
           </p>
 
@@ -72,6 +75,7 @@ const Home:React.FC = () => {
             *14 days Free Trial  &nbsp;&nbsp;&nbsp;   * No Credit Card Required
           </p>
         </div>
+
       </div>
 
       {/* Right Side: Image */}

@@ -49,7 +49,7 @@ export default function Aboutvideo() {
   return (
     <div
       ref={videoRef}
-      className={`relative w-full h-auto min-h-[50vh] md:h-[70vh] flex items-center justify-center transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'} p-0 m-0`}
+      className={`relative w-full h-auto  md:h-[70vh] flex items-center justify-center transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'} p-0 m-0`}    //min-h[50vh]
     >
       <motion.div
         className={`w-full max-w-[90vw] md:max-w-4xl p-0 m-0`}
