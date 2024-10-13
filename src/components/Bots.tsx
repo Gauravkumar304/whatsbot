@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image"; // Import the Image component
-
+import botimg from "../app/assets/homedesign1.png"
 const Bots = () => {
   // Array of image URLs
   const images = [
@@ -28,8 +28,13 @@ const Bots = () => {
     <div className="flex justify-center items-center">
       <div className="w-full max-w-8xl">
         <div className="text-center mb-12">
-          <div className="flex justify-center items-center rounded-lg">
-            <div className="relative w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] max-w-md sm:max-w-md md:max-w-2xl lg:max-w-4xl">
+          <div className="flex justify-center items-center rounded-lg ">
+          <Image 
+            src={botimg}
+            alt="" 
+            className="hidden md:block m-20 mt-[-96px] "
+            />
+            <div className="relative  w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] max-w-md sm:max-w-md md:max-w-2xl lg:max-w-4xl">
               {/* Map through images */}
               {images.map((image, index) => (
                 <div
@@ -51,6 +56,13 @@ const Bots = () => {
                 </div>
               ))}
             </div>
+
+            <Image 
+            src={botimg}
+            alt="" 
+            className="hidden md:block m-20 mt-96"
+            />
+
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@ import React from "react";
 
 // List of company logos as an array of image paths
 const companyLogos = [
-  "/marquee1.png", // Replace with actual image paths
+  "/marquee1.png",
   "/marquee2.png",
   "/marquee3.png",
   "/marquee4.png",
@@ -17,12 +17,9 @@ const companyLogos = [
 const Marquee = () => {
   return (
     <div className="overflow-hidden py-4 md:p-0 p-10 h-15 m-5 md:m-20">
-      {/* 
-        Using the same container for the animation without manually duplicating the logos. 
-        The animation is set up to loop continuously without jumps. 
-      */}
+      {/* Duplicate the logos to create a seamless circular scrolling effect */}
       <div className="flex animate-marquee whitespace-nowrap">
-        {companyLogos.map((logo, index) => (
+        {[...companyLogos, ...companyLogos].map((logo, index) => (
           <img
             key={index}
             src={logo}
@@ -35,21 +32,16 @@ const Marquee = () => {
       <style jsx>{`
         @keyframes marquee {
           0% {
-            transform: translateX(0); /* Start at the original position */
+            transform: translateX(0);
           }
           100% {
-            transform: translateX(-100%); /* Move all the way to the left */
+            transform: translateX(-50%);
           }
         }
 
         .animate-marquee {
-          animation: marquee 30s linear infinite; /* Smooth linear animation */
+          animation: marquee 30s linear infinite;
         }
-
-        /* 
-          Problem: The animation was jumping because of manual duplication in JSX. 
-          Solution: Use keyframes to achieve a continuous scrolling effect and avoid manual duplication. 
-        */
       `}</style>
     </div>
   );

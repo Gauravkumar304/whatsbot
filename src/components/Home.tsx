@@ -3,7 +3,7 @@ import React, { useState }  from "react";
 import Image from "next/image";
 import homeimg from "../app/assets/home.webp"; // Replace this with the actual path
 import homedesign1 from "../app/assets/homedesign1.png"
-// import hometextdesign from "../app/assets/hometextdesign.png"
+import hometextdesign from "../app/assets/hometextdesign.png"
 
 const Home:React.FC = () => {
 
@@ -40,17 +40,29 @@ const Home:React.FC = () => {
             Understand the differences between
           </p>
           
-          <p className="text-green-500 text-lg mb-2 md:text-3xl font-bold font-poppins leading-tight">
-          {/* <Image
+          {/* <p className="text-green-500 text-lg mb-2 md:text-3xl font-bold font-poppins leading-tight">          
+            Cloud API and Business API   
+          </p>  */}
+          
+
+      <div className="relative">
+        {/* Position the ellipse behind the text */}
+        <div className="absolute left-[-20px] inset-2 w-full h-full transform -translate-y-3 translate-x-0.5">
+          <Image
             src={hometextdesign}
-            alt="text background"/> */}
-            Cloud API and Business API  
-           
-          </p> 
+            alt="Ellipse decoration"
+            width={250} // Adjust size if needed
+            height={100} // Adjust size if needed
+            objectFit="contain"
+            className="hidden md:block"
+          />
+        </div>
 
-
-
-
+        {/* Text that is inside the ellipse */}
+        <p className="relative text-green-500 text-lg md:text-3xl font-bold font-poppins leading-tight">
+          Cloud API and Business API
+        </p>
+      </div>
 
           {/* Paragraphs adjusted for one line with reduced size */}
           <p className="text-xs md:text-base font-poppins leading-tight">

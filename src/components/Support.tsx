@@ -1,5 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
+import Image from "next/image";
+import hometextdesign from "../app/assets/hometextdesign.png"
 
 const Support: React.FC = () => {
   // Create refs for each section
@@ -44,15 +46,28 @@ const Support: React.FC = () => {
         className="text-4xl sm:text-4xl font-bold text-gray-900 opacity-0"
         style={{ fontFamily: "'Poppins', sans-serif", fontSize: "32px" }}
       >
-        WhatsApp <span className="text-green-500">Support</span>
-      </h1>
-      {/* WhatsApp{" "}
-        <span className="relative inline-block">
-          <span className="absolute inset-0 rounded-full border-2 border-green-500 transform -translate-x-1/2 -translate-y-1/2"></span>
-          <span className="relative text-green-500">Support</span>
-        </span>
-      </h1> */}
+        {/* WhatsApp <span className="text-green-500"> */}
 
+        <div className="relative">
+        {/* Position the ellipse behind the text */}
+        WhatsApp <span className="text-green-500">
+        <div className="absolute left-[-16px] inset-3 w-full h-full transform -translate-y-3 translate-x-0.5">
+          <Image
+            src={hometextdesign}
+            alt="Ellipse decoration"
+            width={200} // Adjust size if needed
+            height={200} // Adjust size if needed
+            objectFit="contain"
+          />
+        </div>
+        {/* Text that is inside the ellipse */}
+        Support</span>
+      </div>
+      {/* WhatsApp <span className="text-green-500"> */}
+      {/* Support</span> */}
+      </h1>
+      
+    
       {/* Subtitle */}
       <p
         ref={subtitleRef}
