@@ -3,7 +3,7 @@ import React, { useState }  from "react";
 import Image from "next/image";
 import homeimg from "../app/assets/home.webp"; // Replace this with the actual path
 import homedesign1 from "../app/assets/homedesign1.png"
-import hometextdesign from "../app/assets/hometextdesign.png"
+// import hometextdesign from "../app/assets/hometextdesign.png"
 
 const Home:React.FC = () => {
 
