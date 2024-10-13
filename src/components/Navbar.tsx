@@ -7,6 +7,15 @@ import Link from "next/link";
 import { faSquareInstagram, faSquareWhatsapp, faFacebookMessenger, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import logo from "../app/assets/pingoo-sqare-small.png";
 
+// Pre-calculate random positions and animation delays for the raindrops
+const numRaindrops = 100; // Reduce the number of raindrops
+const raindropStyles = Array.from({ length: numRaindrops }).map(() => ({
+  left: `${Math.random() * 100}%`,
+  top: `${Math.random() * 100}%`,
+  animationDelay: `${Math.random() * 2}s`,
+  animationDuration: `${2 + Math.random() * 3}s`,
+}));
+
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -15,35 +24,33 @@ export default function Navbar() {
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
 
   const handleMouseLeave = () => {
-    setIsDropdownOpen(false); // Close dropdown when mouse leaves the dropdown area
+    setIsDropdownOpen(false);
   };
 
   return (
     <div>
       {/* First Navbar with Raindrop Effect */}
       <nav className="bg-blue-500 p-1 fixed top-0 w-full h-8 z-50 overflow-hidden">
-  <p className="text-white flex justify-center p-1 text-[10px] sm:text-xs font-semibold text-center font-poppins">
-    Set Up WhatsApp Cloud API in Just 10 Minutes (+ Best Practices) [2024]
-  </p>
+        <p className="text-white flex justify-center p-1 text-[10px] sm:text-xs font-semibold text-center font-poppins">
+          Set Up WhatsApp Cloud API in Just 10 Minutes (+ Best Practices) [2024]
+        </p>
 
-  {/* Floating Droplet Animation */}
-  <div className="absolute inset-0 overflow-hidden pointer-events-none">
-    {Array.from({ length: 300 }).map((_, i) => (
-      <span
-        key={i}
-        className="absolute bg-gray-300 rounded-full opacity-30 drop-shadow-lg animate-float w-[2px] h-[2px] sm:w-[3px] sm:h-[3px]"
-        style={{
-          left: `${Math.random() * 100}%`,
-          top: `${Math.random() * 100}%`,
-          animationDelay: `${Math.random() * 1}s`,
-          animationDuration: `${2 + Math.random() * 1}s`,
-          willChange: 'transform, opacity',
-        }}
-      ></span>
-    ))}
-  </div>
-</nav>
-
+        {/* Floating Droplet Animation */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {raindropStyles.map((style, i) => (
+            <span
+              key={i}
+              className="absolute bg-gray-300 rounded-full opacity-30 drop-shadow-lg animate-float w-[2px] h-[2px] sm:w-[3px] sm:h-[3px]"
+              style={{
+                left: style.left,
+                top: style.top,
+                animationDelay: style.animationDelay,
+                animationDuration: style.animationDuration,
+              }}
+            ></span>
+          ))}
+        </div>
+      </nav>
 
       {/* Second Navbar */}
       <nav className="bg-white p-2 shadow fixed top-[32px] sm:top-[32px] w-full z-40">
@@ -60,12 +67,11 @@ export default function Navbar() {
             ) : (
               <FontAwesomeIcon icon={faBars} className="h-6 w-6" /> 
             )}
-  
           </button>
 
           {/* Navbar Links and Buttons */}
           <div className={`w-full hidden md:flex md:items-center md:space-x-4`}> 
-            <ul className="flex flex-col md:flex-row justify-center items-center flex-grow space-y-2 md:space-y-0 md:space-x-4 list-none p font-poppins">
+            <ul className="flex flex-col md:flex-row justify-center items-center flex-grow space-y-2 md:space-y-0 md:space-x-4 list-none font-poppins">
               <li>
                 <Link href="#">
                   <p className="text-black font-semibold text-sm hover:text-blue-500 cursor-pointer">
@@ -93,6 +99,7 @@ export default function Navbar() {
                     onMouseLeave={handleMouseLeave}
                     className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-md p-6 w-[600px]"
                   >
+                    {/* Dropdown content goes here */}
                     <div className="grid grid-cols-2 gap-4">
                       <div>
                         <h3 className="font-bold text-gray-900 mb-2">Templates</h3>
@@ -132,10 +139,12 @@ export default function Navbar() {
                         </div>
                       </div>
                     </div>
+                  
                   </div>
                 )}
               </li>
             </ul>
+
             {/* Buttons on the Right */}
             <div className="flex space-x-4">
               <button className="bg-blue-500 text-white px-4 py-2 rounded font-semibold text-sm hover:bg-blue-600">
@@ -151,6 +160,7 @@ export default function Navbar() {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 space-y-4 px-4">
+            {/* Mobile menu content */}
             <ul className="flex flex-col items-center space-y-4 text-sm text-blue-500 font-medium">
               <li>
                 <Link href="/" className=" text-black font-semibold text-sm hover:text-blue-500 cursor-pointer">
