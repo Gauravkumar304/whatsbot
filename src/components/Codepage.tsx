@@ -64,19 +64,19 @@ const Codepage: React.FC = () => {
           <div className="space-y-2 mt-2">
             <div className="flex items-center space-x-2">
               <div className="bg-gray-700 p-1 rounded-full">
-                <span className="text-blue-400 text-lg">?</span>
+                <span className="text-green-400 text-lg">?</span>
               </div>
               <span className="text-sm">List your service</span>
             </div>
             <div className="flex items-center space-x-2">
               <div className="bg-gray-700 p-1 rounded-full">
-                <span className="text-blue-400 text-lg">◉</span>
+                <span className="text-green-400 text-lg">◉</span>
               </div>
               <span className="text-sm">Purchase product, schedule meet, etc.</span>
             </div>
             <div className="flex items-center space-x-2">
               <div className="bg-gray-700 p-1 rounded-full">
-                <span className="text-blue-400 text-lg">☑</span>
+                <span className="text-green-400 text-lg">☑</span>
               </div>
               <span className="text-sm">Get tracking</span>
             </div>
@@ -121,7 +121,7 @@ const Codepage: React.FC = () => {
                   {step.options.map((option) => (
                     <div
                       key={option}
-                      className="bg-blue-500 text-white px-3 py-1 rounded-lg cursor-pointer hover:bg-blue-600"
+                      className="bg-green-500 text-white px-3 py-1 rounded-lg cursor-pointer hover:bg-green-600"
                     >
                       {option}
                     </div>

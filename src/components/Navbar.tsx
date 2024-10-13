@@ -30,7 +30,7 @@ export default function Navbar() {
   return (
     <div>
       {/* First Navbar with Raindrop Effect */}
-      <nav className="bg-blue-500 p-1 fixed top-0 w-full h-8 z-50 overflow-hidden">
+      <nav className="bg-green-500 p-1 fixed top-0 w-full h-8 z-50 overflow-hidden">
         <p className="text-white flex justify-center p-1 text-[10px] sm:text-xs font-semibold text-center font-poppins">
           Set Up WhatsApp Cloud API in Just 10 Minutes (+ Best Practices) [2024]
         </p>
@@ -61,7 +61,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Toggle */}
-          <button className="md:hidden text-blue-500" onClick={toggleMobileMenu}>
+          <button className="md:hidden text-green-500" onClick={toggleMobileMenu}>
             {isMobileMenuOpen ? (
               <FontAwesomeIcon icon={faTimes} className="h-6 w-6" />
             ) : (
@@ -74,14 +74,14 @@ export default function Navbar() {
             <ul className="flex flex-col md:flex-row justify-center items-center flex-grow space-y-2 md:space-y-0 md:space-x-4 list-none font-poppins">
               <li>
                 <Link href="#">
-                  <p className="text-black font-semibold text-sm hover:text-blue-500 cursor-pointer">
+                  <p className="text-black font-semibold text-sm hover:text-green-500 cursor-pointer">
                     Home
                   </p>
                 </Link>
               </li>
               <li>
                 <Link href="#">
-                  <p className="text-black font-semibold text-sm hover:text-blue-500 cursor-pointer">
+                  <p className="text-black font-semibold text-sm hover:text-green-500 cursor-pointer">
                     Features
                   </p>
                 </Link>
@@ -89,7 +89,7 @@ export default function Navbar() {
               <li className="relative">
                 <button
                   onClick={toggleDropdown}
-                  className="flex items-center text-black font-semibold text-sm hover:text-blue-500 cursor-pointer"
+                  className="flex items-center text-black font-semibold text-sm hover:text-green-500 cursor-pointer"
                 >
                   Solutions
                   <FontAwesomeIcon icon={faChevronDown} className="ml-1" />
@@ -128,7 +128,7 @@ export default function Navbar() {
                           </div>
                           <div className="flex space-x-4">
                             <a href="#" className="text-sm hover:underline">
-                              <FontAwesomeIcon icon={faFacebookMessenger} size="2x" className="text-blue-600" />
+                              <FontAwesomeIcon icon={faFacebookMessenger} size="2x" className="text-green-600" />
                               Messenger
                             </a>
                             <a href="#" className="text-sm hover:underline">
@@ -147,10 +147,10 @@ export default function Navbar() {
 
             {/* Buttons on the Right */}
             <div className="flex space-x-4">
-              <button className="bg-blue-500 text-white px-4 py-2 rounded font-semibold text-sm hover:bg-blue-600">
+              <button className="bg-green-500 text-white px-4 py-2 rounded font-semibold text-sm hover:bg-green-600">
                 Book Demo
               </button>
-              <button className="text-blue-500 border border-blue-500 px-4 py-2 rounded font-semibold text-sm hover:bg-blue-200">
+              <button className="text-green-500 border border-green-500 px-4 py-2 rounded font-semibold text-sm hover:bg-green-200">
                 <Link href="/login">Login</Link>
               </button>
             </div>
@@ -161,19 +161,19 @@ export default function Navbar() {
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 space-y-4 px-4">
             {/* Mobile menu content */}
-            <ul className="flex flex-col items-center space-y-4 text-sm text-blue-500 font-medium">
+            <ul className="flex flex-col items-center space-y-4 text-sm text-green-500 font-medium">
               <li>
-                <Link href="/" className=" text-black font-semibold text-sm hover:text-blue-500 cursor-pointer">
+                <Link href="/" className=" text-black font-semibold text-sm hover:text-green-500 cursor-pointer">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-black font-semibold text-sm hover:text-blue-500 cursor-pointer">
+                <Link href="#" className="text-black font-semibold text-sm hover:text-green-500 cursor-pointer">
                   Features
                 </Link>
               </li>
               <li>
-                <button onClick={toggleDropdown} className="text-black font-semibold text-sm hover:text-blue-500 cursor-pointer">
+                <button onClick={toggleDropdown} className="text-black font-semibold text-sm hover:text-green-500 cursor-pointer">
                   Solutions
                   <FontAwesomeIcon icon={faChevronDown} className="ml-1" />
                 </button>
@@ -193,10 +193,10 @@ export default function Navbar() {
 
             {/* Mobile Right-side Buttons */}
             <div className="flex flex-col items-center space-y-4">
-              <button className="border border-blue-500 text-blue-500 px-4 py-2 font-semibold text-xs rounded hover:bg-blue-50 w-full max-w-xs">
+              <button className="border border-green-500 text-green-500 px-4 py-2 font-semibold text-xs rounded hover:bg-green-50 w-full max-w-xs">
               <Link href="/login">Login</Link>
               </button>
-              <button className="bg-blue-500 text-white px-4 py-2 font-semibold text-xs rounded hover:bg-blue-600 w-full max-w-xs">
+              <button className="bg-green-500 text-white px-4 py-2 font-semibold text-xs rounded hover:bg-green-600 w-full max-w-xs">
                 Book Demo
               </button>
             </div>

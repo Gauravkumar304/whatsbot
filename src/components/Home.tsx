@@ -33,7 +33,7 @@ const Home:React.FC = () => {
             Understand the differences between
           </p>
           
-          <p className="text-blue-500 text-lg mb-2 md:text-3xl font-bold font-poppins leading-tight">
+          <p className="text-green-500 text-lg mb-2 md:text-3xl font-bold font-poppins leading-tight">
           
             Cloud API and Business API
           </p>
@@ -49,7 +49,7 @@ const Home:React.FC = () => {
           {/* Button adjusted for better responsiveness */}
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mb-4">
               <button
-                className="relative overflow-hidden bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 font-semibold font-poppins transition-all duration-300 transform hover:scale-105 active:scale-95 focus:outline-none"
+                className="relative overflow-hidden bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 font-semibold font-poppins transition-all duration-300 transform hover:scale-105 active:scale-95 focus:outline-none"
                 onClick={handleClick}
               >
                 <span className="relative z-10">Book Demo</span>
@@ -71,7 +71,7 @@ const Home:React.FC = () => {
 
 
           {/* Small disclaimer text */}
-          <p className="text-xs md:text-sm text-blue-500 font-poppins">
+          <p className="text-xs md:text-sm text-green-500 font-poppins">
             *14 days Free Trial  &nbsp;&nbsp;&nbsp;   * No Credit Card Required
           </p>
         </div>

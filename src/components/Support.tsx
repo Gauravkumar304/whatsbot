@@ -44,7 +44,7 @@ const Support: React.FC = () => {
         className="text-4xl sm:text-4xl font-bold text-gray-900 opacity-0"
         style={{ fontFamily: "'Poppins', sans-serif", fontSize: "32px" }}
       >
-        WhatsApp <span className="text-blue-500">Support</span>
+        WhatsApp <span className="text-green-500">Support</span>
       </h1>
 
       {/* Subtitle */}
@@ -62,7 +62,7 @@ const Support: React.FC = () => {
         className="mt-8 flex space-x-4 opacity-0 flex-wrap justify-center"
       >
         <div className="flex flex-col items-center">
-          <FontAwesomeIcon icon={faGlobe} size="2x" className="text-blue-500" />
+          <FontAwesomeIcon icon={faGlobe} size="2x" className="text-green-500" />
           <span className="text-sm text-gray-600">Website</span>
         </div>
         <div className="flex flex-col items-center">
@@ -74,7 +74,7 @@ const Support: React.FC = () => {
           <span className="text-sm text-gray-600">Instagram</span>
         </div>
         <div className="flex flex-col items-center">
-          <FontAwesomeIcon icon={faFacebookMessenger} size="2x" className="text-blue-600" />
+          <FontAwesomeIcon icon={faFacebookMessenger} size="2x" className="text-green-600" />
           <span className="text-sm text-gray-600">Facebook</span>
         </div>
         <div className="flex flex-col items-center">

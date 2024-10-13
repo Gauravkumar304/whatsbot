@@ -44,7 +44,7 @@ const Feature: React.FC = () => {
           ref={headingRef}
           className={`text-2xl md:text-3xl font-bold transition-transform duration-300 transform ${isVisible ? 'scale-105' : 'scale-100'}`}
         >
-          Feature Rich <span className="text-blue-500">WhatsApp Chatbot</span>
+          Feature Rich <span className="text-green-500">WhatsApp Chatbot</span>
         </h1>
         <p className="mt-2 text-sm md:text-base text-gray-600">
           All the features you need for seamless workflows and to achieve your business goals.
@@ -91,9 +91,9 @@ const Feature: React.FC = () => {
           </div>
 
           {/* Feature 3 (Book Demo) */}
-          <div className="bg-blue-500 p-4 rounded-lg shadow-md text-center text-white transition-transform duration-300 transform hover:scale-105 hover:shadow-lg">
+          <div className="bg-green-500 p-4 rounded-lg shadow-md text-center text-white transition-transform duration-300 transform hover:scale-105 hover:shadow-lg">
             <h3 className="text-sm font-bold mb-2">See more of what we can do for your business</h3>
-            <button className="px-3 py-1 bg-white text-blue-500 rounded-full font-bold shadow-md hover:bg-gray-100">
+            <button className="px-3 py-1 bg-white text-green-500 rounded-full font-bold shadow-md hover:bg-gray-100">
               Book Demo Now
             </button>
           </div>
@@ -114,8 +114,8 @@ const Feature: React.FC = () => {
           {/* Feature 6 */}
           <div className="relative bg-gray-50 p-4 rounded-lg shadow-md transition-transform duration-300 transform hover:scale-105 hover:shadow-lg">
             <div className="flex flex-col items-center">
-              <div className="bg-blue-100 p-2 rounded-full">
-                <FontAwesomeIcon icon={faGear} className='h-6 text-blue-400' />
+              <div className="bg-green-100 p-2 rounded-full">
+                <FontAwesomeIcon icon={faGear} className='h-6 text-green-400' />
               </div>
             </div>
             <div className='flex flex-col'>

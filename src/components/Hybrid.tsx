@@ -10,7 +10,7 @@ const Hybrid: React.FC = () => {
       {/* Heading Section */}
       <div className="mt-8 ml-4 text-left">
         <h1 className="text-3xl sm:text-3xl md:text-4xl font-bold text-gray-900">
-          Hybrid AI Chatbot   <span className="text-blue-500"> - Ai WhatsApp chatbot</span>   {/*  (Bot+Live Agent)     */}
+          Hybrid AI Chatbot   <span className="text-green-500"> - Ai WhatsApp chatbot</span>   {/*  (Bot+Live Agent)     */}
         </h1>
         <p className="mt-4 text-sm sm:text-base md:text-lg text-gray-700">
           Use Pinggo to automate conversations, and easily <br /> switch to human agents for personalized help when <br className="hidden sm:inline" /> required.
